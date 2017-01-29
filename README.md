@@ -1,3 +1,3 @@
 # raymondhcyu.github.io
 
-# WIP
+# Work in progress.
