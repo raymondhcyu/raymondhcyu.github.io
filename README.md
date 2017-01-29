@@ -1,5 +1,3 @@
 # raymondhcyu.github.io
 
-# Website in development.
-
-# 👌
+# WIP
