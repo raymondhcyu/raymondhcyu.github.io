@@ -23,6 +23,12 @@
     font-family: verdana;
     font-size: 50%;
   }
+  
+  h4 {
+	color: red;
+	font-family: verdana;
+	font-size: 50%;
+  }
 </style>
 </head>
 
@@ -53,8 +59,16 @@
     <br>
   </form> 
 	<br>
-	<button onclick="button">Submit</button>
+	<button onclick="submitButton">Submit</button>
+	<p id="denied"></p>
+	<script>
+	function submitButton()
+	{
+		document.getElementByEd("denied").innerHTML = "Access denied.";
+	}
+	</script>
     <br>
+	<br>
 	<h3> Contact administrator or support@quaternion.me for authorization. </h3>
     </center></div>
   
