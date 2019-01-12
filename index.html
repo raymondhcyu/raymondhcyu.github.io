@@ -4,9 +4,7 @@
 <head>
 
 <title>Access Control</title>
-	
-<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Font_R.svg/2000px-Font_R.svg.png">
-
+<link rel="icon" type="image/png" href="images/letterR.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -15,19 +13,19 @@
     font-family: verdana;
     font-size: 175%;
   }
-  
+
   h2 {
     color: black;
     font-family: verdana;
     font-size: 100%;
   }
-  
+
   h3 {
     color: black;
     font-family: verdana;
     font-size: 75%;
   }
-  
+
   h4 {
     color: black;
     font-family: verdana;
@@ -44,32 +42,32 @@
   </div>
 
   <div style = "position: absolute; bottom: 0; right: 5; text-align:right;">
-    <h4><center>Last update: 03 June 2018</center></h4>
+    <h4><center>Last update: 11 January 2019</center></h4>
   </div>
-  
+
   <script>
   // insert JS here
-  // if you are reading this, kudos :) 
+  // if you are reading this, kudos :)
   </script>
 
   <div><center>
-  
+
     <h1> This website is access controlled. <br/> Enter login credentials below. </h1>
 	<br><br>
-	
+
   <form>
     <h2>Username:</h2>
     <input type="text" name="username">
     <h2>Password:</h2>
     <input type="password" name="password" autocomplete="off">
     <br>
-  </form> 
+  </form>
 	<br>
-	
+
 	<button onclick="submitButton()">Submit</button>
-	
+
 	<p id="denied"></p>
-	
+
 	<script>
 	function submitButton()
 	{
@@ -80,13 +78,22 @@
 		document.getElementById("denied").style.backgroundColor = "red";
 	}
 	</script>
-	
+
 	<br>
-	<h3> Contact administrator or 
+	<h3> Contact administrator or
 	<a href="mailto:support@quaternion.me?Subject=Access%20Request" target="_top">support@quaternion.me</a>
 	for authorization. </h3>
-	
+
+	<!-- *** New button/link test area to go to another page *** -->
+	<!-- <br>
+
+	<form action="http://google.ca">
+	    <input type="submit" value="Button to another page" />
+	</form>
+
+	<h3><a href="pages/newPage.html">Next page</a></h3> -->
+
     </center></div>
-  
+
 </body>
 </html>
