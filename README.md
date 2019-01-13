@@ -1,3 +1,3 @@
-# raymondhcyu.github.io
+# Raymond's personal website
 
-# Work in progress.
+# raymondhcyu.github.io
