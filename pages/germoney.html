@@ -83,6 +83,7 @@
 			var locationColumn = 7;
 			var otherColumn = 10;
 			var numColumns = data[1].length; // number of columns with parameters like Title, Cost, Address, etc.
+			var infoWindow = new google.maps.InfoWindow(); // single global infoWindow to access/close for each marker
 
 			console.log("data[1].length: " + data[1].length);
 			console.log("data.length: " + data.length);
@@ -109,7 +110,6 @@
 						htmlContent: contentString
 					});
 					// *** infoWindow population from JSONP ***
-					var infoWindow = new google.maps.InfoWindow();
 					google.maps.event.addListener(marker,'click', (function(marker,contentString,infoWindow){
     					return function() {
         					infoWindow.setContent(contentString);
