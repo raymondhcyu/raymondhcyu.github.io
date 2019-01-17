@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Gibraltor</title>
+        <link rel="icon" type="image/png" href="../images/mapMarkerBlue.png">
+
+		<style>
+		html, body { /*Optional, outside size of web page*/
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 600px;
+		}
+
+		#map_canvas {
+			width: 100%; /*full width of web page*/
+			height: 100%; /*full height of web page*/
+		}
+		h1 {
+	      color: black;
+	      font-family: verdana;
+	      font-size: 175%;
+	    }
+	    h2 {
+	      color: black;
+	      font-family: verdana;
+	      font-size: 100%;
+		  line-height: 25%;
+	    }
+	    h3 {
+	      color: black;
+	      font-family: verdana;
+	      font-size: 75%;
+	    }
+	    h4 {
+	      color: black;
+	      font-family: verdana;
+	      font-size: 75%;
+		  font-weight: lighter;
+	    }
+		/* p.small {
+			line-height: 0.75;
+		} */
+		</style>
+
+	<body onload="initialize()">
+		<h2>Let's go to Gibraltor (via Malaga)!</h2>
+		<div id = "map_canvas"></div>
+
+		<script>
+		// web service URL
+		var DATA_SERVICE_URL = "https://script.google.com/macros/s/AKfycbw74ktH2vI6Ov-_8fT2ECpRtlEF1207l32NAyowMzLKGvpZPFyR/exec?jsonp=callback";
+		var map;
+		var startZoom = 2;
+		var startLat = 0; // only executed once anyways, not continuous execution loop
+		var startLng = 0;
+
+		function initialize() {
+			map = new google.maps.Map(document.getElementById('map_canvas'), {
+				center: new google.maps.LatLng(startLat, startLng),
+				scaleControl: true,
+				zoom: startZoom,
+				maxZoom: 20,
+				mapTypeId: 'roadmap' // change map type to suit
+			});
+			// unsure what this does
+			var scriptElement = document.createElement('script');
+			scriptElement.src = DATA_SERVICE_URL;
+			document.getElementsByTagName('head')[0].appendChild(scriptElement); // unsure what this does
+		}
+
+		function callback(data) {
+			var i = 0;
+			var latColumn = 9; // enter column number for latitude coordinate from sheets
+			var lngColumn = 8; // enter column number for longitude coordinate from sheets
+			var titleColumn = 1; // enter "" for title from Sheets
+			var durationColumn = 2; // enter "" for duration from Sheets
+			var timeColumn = 3; // enter "" for time [open] from Sheets
+			var linkColumn = 4;
+			var costColumn = 5;
+			var locationColumn = 7;
+			var otherColumn = 10;
+			var numColumns = data[1].length; // number of columns with parameters like Title, Cost, Address, etc.
+			var infoWindow = new google.maps.InfoWindow(); // single global infoWindow to access/close for each marker
+
+			console.log("data[1].length: " + data[1].length);
+			console.log("data.length: " + data.length);
+
+			for (i = 1; i < data.length; i++) { // depends where lat/lng ROWS start
+				if (data[i][latColumn] == '') { // determine if cell is empty
+					console.log("Null condition.");
+				}
+				else {
+					// *** content for infowindow ***
+					var contentString = '<div id = "content">' +
+						'<h2>Title: <span style="font-weight:lighter;">' + data[i][titleColumn] + '</span></h2>' +
+						'<h2>Duration: <span style="font-weight:lighter;">' + data[i][durationColumn] + '</span></h2>' +
+						'<h2>Opening hours: <span style="font-weight:lighter;">' + data[i][timeColumn] + '</span></h2>' +
+						'<h2>Cost: <span style="font-weight:lighter;">' + data[i][costColumn] + 'GBP </span></h2>' +
+						'<h2>Location: <span style="font-weight:lighter;">' + data[i][locationColumn] + '</span></h2>' +
+						'<p><h2>Notes: <span style="font-weight:lighter;">' + data[i][otherColumn] + '</span></h2><p>' +
+						'</div>';
+					var marker = new google.maps.Marker({ // display marker icon on map
+						position: new google.maps.LatLng(data[i][latColumn], data[i][lngColumn]), // longlat coordinates from Sheets, columns 8 and 9
+						map: map, // referred to map
+						animation: google.maps.Animation.DROP,
+						title: data[i][titleColumn], // name for icon
+						htmlContent: contentString
+					});
+					// *** infoWindow population from JSONP ***
+					google.maps.event.addListener(marker,'click', (function(marker,contentString,infoWindow){
+    					return function() {
+        					infoWindow.setContent(contentString);
+        					infoWindow.open(map,marker);
+							console.log("infoWindow opened")
+    					};
+					})(marker,contentString,infoWindow));
+					// console.log("True condition.");
+				}
+			}
+
+			console.log("Finis.");
+
+			// ***Reset starting coordinates to cluster area***
+			startLat = data[5][9];
+			startLng = data[5][8];
+			startZoom = 14;
+		}
+		</script>
+		<script> console.log("Finis, vraiment.") // executed first before callback below </script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp7A6U__CFBzdFKSF_EvXG4snFpd7k2vY&callback=initialize"
+  type="text/javascript"></script>
+		<!-- Note: API key has an enforced quota, please don't spam requests -->
+	</head>
+	</body>
+</html>
