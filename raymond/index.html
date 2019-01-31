@@ -63,42 +63,77 @@ nav a:hover {
 }
 
 div.about {
-    height: 200px;
+    height: 100px;
     line-height: 200px;
     text-align: left;
+    margin-left: 20%;
+    margin-right: auto;
+    width: 50em;
 }
-
 span {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
     height: 0%;
 }
-
+img {
+    float: left;
+}
 h1 {
     color: black;
     font-family: oxygen, Helvetica, sans-serif;
     font-size: 200%;
-  }
+}
 h2 {
     color: black;
     font-family: oxygen, Helvetica, sans-serif;
     font-size: 125%;
-  }
-h3 {
-    letter-spacing: 0px;
-    line-height: 0px;
-    height: 0px;
     font-weight: normal;
-  }
+    letter-spacing: 1px;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    display: inline-block;
+    height: 1.5em;
+    border-bottom: 2px solid;
+    color: #F5F5F5;
+    margin-top: 5px;
+}
+h3 {
+    color: #404040;
+    font-family: oxygen, Helvetica, sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 1.5em;
+}
 h4 {
     letter-spacing: 3px;
     line-height: 0px;
     height: 0px;
     font-weight: thick;
     vertical-align: text-top;
-  }
-
+}
+footer {
+    position: fixed;
+    height: 300px;
+    bottom: 0px;
+    width: 100%;
+    font-family: oxygen, Helvetica, sans-serif;
+    font-size: 75%;
+    letter-spacing: 1px;
+}
+div.copyright {
+    position: absolute;
+    width: 100%;
+    color: #404040;
+    line-height: 40px;
+    font-size: 0.7em;
+    text-align: center;
+    bottom:0;
+}
 </style>
 </head>
 
@@ -106,21 +141,39 @@ h4 {
 
 <nav>
     <a id="raymond" href=".">RAYMOND YU</a>
-    <a href="Yu Raymond Resume REV02.pdf" target="_blank">RESUME</a>
-    <a href="Yu Raymond Project Portfolio International REV17 Master.pdf" target="_blank">PORTFOLIO</a>
+    <a href="#" target="_blank">RESUME</a>
+    <a href="#" target="_blank">PORTFOLIO</a>
+    <a href="#" target="_blank">CONTACT</a>
 </nav>
 
 <div class="about">
 <span>
 <h2>
 ABOUT
-<br><br>
-With a fiery passion for airplanes, I am currently working at Airbus Commercial Aircraft, developing
-industry-changing technologies which will revolutionize aerospace design.
-</thead>
 </h2>
+<br>
+<h3>
+<img src="aboutPic.jpg" alt="raymondPic" style="width: 420px; height: 400px; margin-right: 20px">
+As a mechatronics engineering student with a strong interest in aviation and new technologies,
+I am taking a gap year from my studies to work at Airbus Commercial Aircraft, where I am striving to develop
+innovative systems to incorporate into the next generation of aircraft. While I have over a year's worth of
+experience working in industrial manufacturing, smart glass R&D, as well as experience leading
+my university UAV team to international competitions, I recognize that my true
+career passion is towards the latter: unmmaned aircraft systems. Applications and technologies are continuously
+being developed, and it is certain that pilotless aircraft will occupy the future skies. My goal is to contribute to the
+proliferation of drones into society - from urban air mobility to package delivery.
+<br><br>
+If you think I can
+help your organization achieve these goals, please let me know!
+<br><br>
+
+</h3>
 </span>
 </div>
+
+<footer>
+    <div class="copyright">© 2019 RAYMOND YU</div>
+</footer>
 
 </body>
 </html>
