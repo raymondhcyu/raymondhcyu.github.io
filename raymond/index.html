@@ -63,12 +63,14 @@ nav a:hover {
 }
 
 div.about {
-    height: 100px;
-    line-height: 200px;
+    height: 200px;
+    line-height: 150px;
     text-align: left;
-    margin-left: 20%;
-    margin-right: auto;
-    width: 50em;
+    position: absolute;
+    /* margin-left: 20%; */
+    left: 20%;
+    width: 60%;
+    /* width: 50em; */
 }
 span {
     display: inline-block;
@@ -94,13 +96,13 @@ h2 {
 h2::after {
     content: '';
     position: absolute;
-    left: 20%;
-    width: 60%;
+    left: 0%;
+    width: 100%;
     display: inline-block;
     height: 1.5em;
     border-bottom: 2px solid;
     color: #F5F5F5;
-    margin-top: 5px;
+    margin-top: 1px;
 }
 h3 {
     color: #404040;
@@ -110,30 +112,31 @@ h3 {
     line-height: 1.5em;
 }
 h4 {
-    letter-spacing: 3px;
-    line-height: 0px;
-    height: 0px;
-    font-weight: thick;
-    vertical-align: text-top;
-}
-footer {
-    position: fixed;
-    height: 300px;
-    bottom: 0px;
-    width: 100%;
     font-family: oxygen, Helvetica, sans-serif;
     font-size: 75%;
+    font-weight: normal;
     letter-spacing: 1px;
 }
-div.copyright {
-    position: absolute;
-    width: 100%;
+/* div.copyright {
     color: #404040;
     line-height: 40px;
     font-size: 0.7em;
-    text-align: center;
-    bottom:0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+} */
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+    color: #404040;
+  text-align: center;
 }
+
 </style>
 </head>
 
@@ -171,9 +174,9 @@ help your organization achieve these goals, please let me know!
 </span>
 </div>
 
-<footer>
-    <div class="copyright">© 2019 RAYMOND YU</div>
-</footer>
+<div class="footer">
+<h4>© 2019 RAYMOND YU</h4>
+</div>
 
 </body>
 </html>
