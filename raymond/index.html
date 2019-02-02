@@ -56,7 +56,7 @@ nav a:hover {
     padding-left: 40px;
     padding-right: 40px;
     margin-right: 20px;
-    margin-left: 0px;
+    margin-left: 20px;
 }
 #raymond:hover {
     color: #17365D;
@@ -81,13 +81,16 @@ span {
 img {
     float: left;
 }
+img.contain {
+    object-fit: contain;
+}
 h1 {
     color: black;
     font-family: oxygen, Helvetica, sans-serif;
     font-size: 200%;
 }
 h2 {
-    color: black;
+    color: #404040;
     font-family: oxygen, Helvetica, sans-serif;
     font-size: 125%;
     font-weight: normal;
@@ -104,30 +107,20 @@ h2::after {
     color: #F5F5F5;
     margin-top: 1px;
 }
-h3 {
+p.about {
     color: #404040;
     font-family: oxygen, Helvetica, sans-serif;
     font-size: 90%;
     font-weight: normal;
     line-height: 1.5em;
 }
-h4 {
+p.footer {
     font-family: oxygen, Helvetica, sans-serif;
     font-size: 75%;
     font-weight: normal;
     letter-spacing: 1px;
 }
-/* div.copyright {
-    color: #404040;
-    line-height: 40px;
-    font-size: 0.7em;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: block;
-} */
-
-.footer {
+div.footer {
   position: relative;
   right: 0;
   bottom: -500px;
@@ -143,7 +136,6 @@ h4 {
 
 <nav>
     <a id="raymond" href=".">RAYMOND YU</a>
-    <a href="#" target="_blank">ABOUT</a>
     <a href="#" target="_blank">RESUME</a>
     <a href="#" target="_blank">PORTFOLIO</a>
     <a href="#" target="_blank">CONTACT</a>
@@ -155,30 +147,26 @@ h4 {
 ABOUT
 </h2>
 <br>
-<h3>
-<img src="aboutPic.jpg" alt="raymondPic" style="width: 420px; height: 400px; margin-right: 20px">
-As a mechatronics engineering student with a strong interest in aviation and new technologies,
-I am taking a gap year from my studies to work at Airbus Commercial Aircraft, where I am striving to develop
-innovative systems to incorporate into the next generation of aircraft. While I have over a year's worth of
-experience working in industrial manufacturing, smart glass R&D, as well as experience leading
-my university UAV team to international competitions, I recognize that my true
-career passion is towards the latter: unmmaned aircraft systems. Applications and technologies are continuously
-being developed, and it is certain that pilotless aircraft will occupy the future skies. My goal is to contribute to the
-proliferation of drones into society - from urban air mobility to package delivery.
+<p class="about">
+<img class="contain" src="aboutPic.jpg" alt="raymondPic" style="height: 47%; width: 47%; object-fit: contain; margin-right: 20px">
+Hello!
 <br><br>
-If you think I can
-help your organization achieve these goals, please let me know!
+I’m a mechatronics engineering student who has a strong interest in aerospace and DIY activities,
+particularly towards UAVs. The future skies will be much busier with unmanned aircraft, and my
+goal is to be part of their proliferation into society.
+<br><br>
+I enjoy learning new topics and developing new skills, and I’m always on the lookout for new opportunities!
+<br><br>
 
-<!-- <br><br><br><br><br><br><br>
-<h4><center>© 2019 RAYMOND YU</center></h4> -->
+<i>Raymond Yu</i>
 
-</h3>
+</p>
 </span>
 </div>
 
-<div class="footer">
-<h4>© 2019 RAYMOND YU</h4>
-</div>
+<!-- <div class="footer">
+<p class="footer">© 2019 RAYMOND YU</p>
+</div> -->
 
 </body>
 </html>
