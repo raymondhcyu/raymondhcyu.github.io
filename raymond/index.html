@@ -30,13 +30,14 @@ nav {
     left: 0;
     background-color: white;
     overflow: hidden;
+    text-decoration: none !important;
 }
 nav a {
     display: block;
     float: left;
 
     color: #808080;
-    text-decoration: none;
+    text-decoration: none !important;
     font-size: 15px;
     letter-spacing: 1px;
 
@@ -48,7 +49,7 @@ nav a {
 nav a:hover {
   /* background-color: #ddd; */
   color: #17365D;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 #raymond {
@@ -117,6 +118,10 @@ p.about {
     font-weight: normal;
     line-height: 1.5em;
 }
+p.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
 p.footer {
     font-family: oxygen, Helvetica, sans-serif;
     font-size: 75%;
@@ -138,8 +143,8 @@ div.footer {
 
 <nav>
     <a id="raymond" href=".">RAYMOND YU</a>
-    <a href="CV.pdf" target="_blank">RESUME</a>
-    <a href="PP.pdf" target="_blank">PORTFOLIO</a>
+    <a href="CV.pdf">RESUME</a>
+    <a href="PP.pdf">PORTFOLIO</a>
     <a href="contact.html">CONTACT</a>
 </nav>
 
