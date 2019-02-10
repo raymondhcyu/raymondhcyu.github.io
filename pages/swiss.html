@@ -16,37 +16,98 @@
 			padding: 0;
 			width: 100%;
 			height: 600px;
+			background-color: #F8F8F8;
+		    min-width: 450px;
+		    font-family: lato, Helvetica, sans-serif;
 		}
-
 		#map_canvas {
 			width: 100%; /*full width of web page*/
-			height: 100%; /*full height of web page*/
+			height: 90%; /*full height of web page*/
 		}
-		h1 {
-	      color: black;
-	      font-family: verdana;
-	      font-size: 175%;
-	    }
-	    h2 {
-	      color: black;
-	      font-family: verdana;
-	      font-size: 100%;
-		  line-height: 25%;
-	    }
-	    h3 {
-	      color: black;
-	      font-family: verdana;
-	      font-size: 75%;
-	    }
-	    h4 {
-	      color: black;
-	      font-family: verdana;
-	      font-size: 75%;
-		  font-weight: lighter;
-	    }
-		/* p.small {
-			line-height: 0.75;
-		} */
+		a {
+		    text-decoration: none !important;
+		}
+		li {
+		    text-align: left;
+		}
+		li a {
+		    color: #F8F8F8;
+		}
+		li a:hover{
+		    color: #1abc9c;
+		}
+		  h1 {
+		    font-size: 200%;
+		  }
+		  h2 {
+		    font-size: 150%;
+		  }
+		  h3 {
+		    font-size: 125%;
+		  }
+		  .about {
+		      color: #404040;
+		      font-size: 100%;
+		      font-weight: normal;
+		      line-height: 1.5em;
+		      text-align: left;
+		  }
+		  .container {
+		      padding-top: 0.25em;
+		      padding-bottom: 0.5em;
+		      margin-left: 0;
+		  }
+		  .container-fluid {
+		      padding-top: 5em;
+		      padding-bottom: 10em;
+		  }
+		  .container-footer {
+		      padding-top: 3em;
+		      padding-bottom: 3em;
+		  }
+		  .bg-1 {
+		      background-color: #F8F8F8;
+		      color: #404040;
+		  }
+		  .bg-2 {
+		      background-color: #404040;
+		      color: white;
+		  }
+		  .navbar {
+		      padding-top: 5px;
+		      padding-bottom: 0px;
+		      border: 0;
+		      border-radius: 0;
+		      margin-bottom: 0;
+		      font-size: 15px;
+		      letter-spacing: 1px;
+		  }
+		  .navbar-nav  li a:hover {
+		    color: #1abc9c !important;
+		  }
+		  .navbar a {
+		      font-size: 15px;
+		      letter-spacing: 1px;
+		  }
+		  .navbar-brand {
+		    transform: translateX(-50%);
+		    left: 50%;
+		    position: absolute;
+		  }
+		  #home {
+		      font-size: 25px;
+		      font-weight: 900;
+		      letter-spacing: 5px;
+		      color: #404040;
+		      padding-top: 15px;
+		  }
+		  #home:hover {
+		      color: #1abc9c;
+		  }
+		  img.home {
+		      padding-bottom: 0.2em;
+		      height: 1em;
+		  }
 		</style>
 
 	<body onload="initialize()">
