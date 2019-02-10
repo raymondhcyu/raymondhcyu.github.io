@@ -16,41 +16,132 @@
 			padding: 0;
 			width: 100%;
 			height: 600px;
+			background-color: #F8F8F8;
+		    min-width: 450px;
+		    font-family: lato, Helvetica, sans-serif;
 		}
 
 		#map_canvas {
 			width: 100%; /*full width of web page*/
-			height: 100%; /*full height of web page*/
+			height: 95%; /*full height of web page*/
 		}
-		h1 {
-	      color: black;
-	      font-family: verdana;
-	      font-size: 175%;
-	    }
-	    h2 {
-	      color: black;
-	      font-family: verdana;
-	      font-size: 100%;
-		  line-height: 25%;
-	    }
-	    h3 {
-	      color: black;
-	      font-family: verdana;
-	      font-size: 75%;
-	    }
-	    h4 {
-	      color: black;
-	      font-family: verdana;
-	      font-size: 75%;
-		  font-weight: lighter;
-	    }
-		/* p.small {
-			line-height: 0.75;
-		} */
+		a {
+		    text-decoration: none !important;
+		}
+		li {
+		    text-align: left;
+		}
+		li a {
+		    color: #F8F8F8;
+		}
+		li a:hover{
+		    color: #1abc9c;
+		}
+		  h1 {
+		    font-size: 200%;
+		  }
+		  h2 {
+		    font-size: 150%;
+		  }
+		  h3 {
+		    font-size: 125%;
+		  }
+		  .about {
+		      color: #404040;
+		      font-size: 100%;
+		      font-weight: normal;
+		      line-height: 1.5em;
+		      text-align: left;
+		  }
+		  .container {
+		      padding-top: 0.25em;
+		      padding-bottom: 0.5em;
+		      margin-left: 0;
+		  }
+		  .container-fluid {
+		      padding-top: 5em;
+		      padding-bottom: 10em;
+		  }
+		  .container-footer {
+		      padding-top: 3em;
+		      padding-bottom: 3em;
+		  }
+		  .bg-1 {
+		      background-color: #F8F8F8;
+		      color: #404040;
+		  }
+		  .bg-2 {
+		      background-color: #404040;
+		      color: white;
+		  }
+		  .navbar {
+		      padding-top: 5px;
+		      padding-bottom: 0px;
+		      border: 0;
+		      border-radius: 0;
+		      margin-bottom: 0;
+		      font-size: 15px;
+		      letter-spacing: 1px;
+		  }
+		  .navbar-nav  li a:hover {
+		    color: #1abc9c !important;
+		  }
+		  .navbar a {
+		      font-size: 15px;
+		      letter-spacing: 1px;
+		  }
+		  .navbar-brand {
+		    transform: translateX(-50%);
+		    left: 50%;
+		    position: absolute;
+		  }
+		  #home {
+		      font-size: 25px;
+		      font-weight: 900;
+		      letter-spacing: 5px;
+		      color: #404040;
+		      padding-top: 15px;
+		  }
+		  #home:hover {
+		      color: #1abc9c;
+		  }
+		  img.home {
+		      padding-bottom: 0.2em;
+		      height: 1em;
+		  }
 		</style>
 
 	<body onload="initialize()">
-		<h2>Let's go to Germany (Berlin)!</h2>
+		<nav class="navbar bg-1 navbar-default">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a id="home" class="navbar-brand" href="."><p><img class="home" src="../images/globe2.png"> TRIPPING</p></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">COUNTRIES<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="swiss.html">Switzerland-France</a></li>
+							<li><a href="gibraltor.html">Gibraltor</a></li>
+							<li><a href="#">Bulgaria-Greece-Romania</a></li>
+							<li><a href="germoney.html">Germany</a></li>
+							<li><a href="#">Poland</a></li>
+							<li><a href="#">Czechslovakia-Hungary</a></li>
+							<li><a href="#">Not Russia</a></li>
+							<!-- <li class="divider"></li> -->
+						</ul>
+					</li>
+				</ul>
+			</div>
+		  </div>
+		</nav>
+		<h2 style="font-weight: bold;"><center>Let's go to Germany (via Berlin)!</center></h2>
 		<div id = "map_canvas"></div>
 
 		<script>
