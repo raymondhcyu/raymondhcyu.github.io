@@ -3,73 +3,177 @@
 
 <head>
     <meta charset = "utf-8">
-    <title>Pages</title>
-    <link rel="icon" type="image/png" href="../images/letterR.png">
+    <title>Let's travel Europe!</title>
+    <link rel="icon" type="image/png" href="../images/globe.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <!-- Google (and Raymond) is tracking your behaviour and location... dun dun duuun-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133553378-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-133553378-1');
     </script>
 
 </head>
 
 <style>
+body {
+    background-color: #F8F8F8;
+    min-width: 400px;
+    font-family: lato, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none !important;
+}
+li {
+    text-align: left;
+}
+li a {
+    color: #F8F8F8;
+}
+li a:hover{
+    color: #1abc9c;
+}
   h1 {
-    color: black;
-    font-family: verdana;
-    font-size: 175%;
+    font-size: 200%;
   }
-
   h2 {
-    color: black;
-    font-family: verdana;
+    font-size: 150%;
+  }
+  h3 {
     font-size: 100%;
   }
-
-  h3 {
-    color: black;
-    font-family: calibri;
-    font-size: 125%;
+  .about {
+      color: #404040;
+      font-size: 100%;
+      font-weight: normal;
+      line-height: 1.5em;
+      text-align: left;
   }
+  .container {
+      padding-top: 0.25em;
+      padding-bottom: 0.5em;
+      margin-left: 0;
+  }
+  .container-fluid {
+      padding-top: 5em;
+      padding-bottom: 10em;
+  }
+  .container-footer {
+      padding-top: 3em;
+      padding-bottom: 3em;
+  }
+  .bg-1 {
+      background-color: #F8F8F8;
+      color: #404040;
+  }
+  .bg-2 {
+      background-color: #404040;
+      color: white;
+  }
+  .navbar {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 15px;
+      letter-spacing: 1px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  .navbar a {
+      font-size: 15px;
+      letter-spacing: 1px;
+  }
+  .navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+  }
+  #home {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 5px;
+      color: #404040;
 
-  h4 {
-    color: black;
-    font-family: verdana;
-    font-size: 75%;
+      padding-top: 15px;
+      /* padding-left: 30px;
+      padding-right: 30px;
+      margin-right: 30px;
+      margin-left: -20px; */
+  }
+  #home:hover {
+      color: #1abc9c;
+  }
+  img.home {
+      padding-bottom: 0.2em;
+      height: 1em;
   }
 </style>
 
-<center>
-<h1>Nothing much to see here...</h1>
-</center>
-<br>
+<body>
+    <nav class="navbar bg-1 navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="home" class="navbar-brand" href="."><p><img class="home" src="../images/globe2.png"> TRIPPING</p></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">COUNTRIES<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="swiss.html">Switzerland-France</a></li>
+                        <li><a href="gibraltor.html">Gibraltor</a></li>
+                        <li><a href="#">Bulgaria-Greece-Romania</a></li>
+                        <li><a href="germoney.html">Germany</a></li>
+                        <li><a href="#">Poland</a></li>
+                        <li><a href="#">Czechslovakia-Hungary</a></li>
+                        <li><a href="#">Not Russia</a></li>
+                        <!-- <li class="divider"></li> -->
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
 
-<h2>
-<div style="width: 25%; margin-left: auto; margin-right: auto;">
-<ul>
-    <li><a href="swiss.html">Switzerland-France</a></li>
-    <li><a href="gibraltor.html">Gibraltor</a></li>
-    <li><a>Bulgaria-Greece-Romania</a></li>
-    <li><a href="germoney.html">Germany</a></li>
-    <li><a>Poland</a></li>
-    <li><a>Czechslovakia-Hungary</a></li>
-    <li><a>CIA interrogation blacksite</a></li>
-    <li><a>Not Russia</a></li>
-</ul>
-</h2>
-<br>
-<h3>
-<center>
-Note: All maps are updated live from data in Sheets.
-Refresh page for latest map.
-</center>
-</h3>
+<div class="container-fluid bg-2 text-center">
+    <h2>Nothing much to see here...</h2>
+    <br>
+    <h2>
+    <div style="width: 25%; margin-left: auto; margin-right: auto;">
+    <ul>
+        <li><a href="swiss.html">Switzerland-France</a></li>
+        <li><a href="gibraltor.html">Gibraltor</a></li>
+        <li>Bulgaria-Greece-Romania</li>
+        <li><a href="germoney.html">Germany</a></li>
+        <li>Poland</li>
+        <li>Czechslovakia-Hungary</li>
+        <li>Not Russia</li>
+    </ul>
+    </h2>
+    <br>
+    <center>
+    Note: All maps are updated live from data in Sheets.
+    Refresh page for latest map.
+    </center>
+    </div>
 </div>
 
+<div class="container-footer text-center">
+    <p>© 2019 Raymond Yu</p>
+</div>
+
+</body>
 </html>
