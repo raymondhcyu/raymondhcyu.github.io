@@ -14,6 +14,7 @@
       gtag('js', new Date());
       gtag('config', 'UA-133543578-1');
     </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 <style>
 body {
@@ -109,25 +110,12 @@ h2 {
 
 <body>
 
-<nav class="navbar bg-1 navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a id="raymond" class="navbar-brand" href="https://www.quaternion.me/raymond">RAYMOND YU</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="CV.pdf">RESUME</a></li>
-        <li><a href="PP.pdf">PORTFOLIO</a></li>
-        <li><a href="">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<div id="navPlaceholder"></div>
+<script>
+    $(function() {
+      $("#navPlaceholder").load("navBar.html");
+    });
+</script>
 
 <div class="container-fluid bg-2 text-center">
     <h2 style="text-align: left;">CONTACT</h2>
