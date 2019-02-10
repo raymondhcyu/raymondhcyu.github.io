@@ -111,9 +111,37 @@
 		</style>
 
 	<body onload="initialize()">
-		<h2>Let's go to Switzerland and the Alps!</h2>
+		<nav class="navbar bg-1 navbar-default">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a id="home" class="navbar-brand" href="."><p><img class="home" src="../images/globe2.png"> TRIPPING</p></a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown" class="dropdown-toggle">COUNTRIES<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="swiss.html">Switzerland-France</a></li>
+							<li><a href="gibraltor.html">Gibraltor</a></li>
+							<li><a href="#">Bulgaria-Greece-Romania</a></li>
+							<li><a href="germoney.html">Germany</a></li>
+							<li><a href="#">Poland</a></li>
+							<li><a href="#">Czechslovakia-Hungary</a></li>
+							<li><a href="#">Not Russia</a></li>
+							<!-- <li class="divider"></li> -->
+						</ul>
+					</li>
+				</ul>
+			</div>
+		  </div>
+		</nav>
+		<h2 style="font-weight: bold;"><center>Let's go to Switzerland and the Alps!</center></h2>
 		<div id = "map_canvas"></div>
-
 		<script>
 		// web service URL
 		var DATA_SERVICE_URL = "https://script.google.com/macros/s/AKfycbxZML4ZnuWtJrwPHRCegwsbTCmUDo_n3eG6vHRlcna_1YlZzrs/exec?jsonp=callback";
@@ -198,6 +226,10 @@
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp7A6U__CFBzdFKSF_EvXG4snFpd7k2vY&callback=initialize"
   type="text/javascript"></script>
 		<!-- Note: API key has an enforced quota, please don't spam requests -->
-	</head>
+
+		<div class="container-footer text-center">
+			<p>© 2019 Raymond Yu</p>
+		</div>
+
 	</body>
 </html>
