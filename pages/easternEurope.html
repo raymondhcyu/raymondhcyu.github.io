@@ -3,112 +3,112 @@
 	<head>
 		<meta charset = "utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Germoney</title>
+		<title>Eastern Yurop</title>
         <link rel="icon" type="image/png" href="../images/mapMarkerBlue.png">
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-		<style>
-			html, body { /*Optional, outside size of web page*/
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 600px;
-				background-color: #F8F8F8;
-			    min-width: 450px;
-			    font-family: lato, Helvetica, sans-serif;
-			}
-			#map_canvas {
-				width: 100%; /*full width of web page*/
-				height: 95%; /*full height of web page*/
-			}
-			a {
-			    text-decoration: none !important;
-			}
-			li {
-			    text-align: left;
-			}
-			li a {
-			    color: #F8F8F8;
-			}
-			li a:hover{
-			    color: #1abc9c;
-			}
-			h1 {
-			    font-size: 200%;
-			  }
-			h2 {
-			    font-size: 150%;
-			  }
-			h3 {
-			    font-size: 125%;
-			  }
-			.about {
-			      color: #404040;
-			      font-size: 100%;
-			      font-weight: normal;
-			      line-height: 1.5em;
-			      text-align: left;
-			  }
-			.container {
-			      padding-top: 0.25em;
-			      padding-bottom: 0.5em;
-			      margin-left: 0;
-			  }
-			.container-fluid {
-			      padding-top: 5em;
-			      padding-bottom: 10em;
-			  }
-			.container-footer {
-			      padding-top: 1em;
-			      padding-bottom: 1em;
-			  }
-			.bg-1 {
-			      background-color: #F8F8F8;
-			      color: #404040;
-			  }
-			.bg-2 {
-			      background-color: #404040;
-			      color: white;
-			  }
-			.navbar {
-			      padding-top: 5px;
-			      padding-bottom: 0px;
-			      border: 0;
-			      border-radius: 0;
-			      margin-bottom: 0;
-			      font-size: 15px;
-			      letter-spacing: 1px;
-			  }
-			.navbar-nav  li a:hover {
-			    color: #1abc9c !important;
-			  }
-			.navbar a {
-			      font-size: 15px;
-			      letter-spacing: 1px;
-			  }
-			.navbar-brand {
-			    transform: translateX(-50%);
-			    left: 50%;
-			    position: absolute;
-			  }
-			#home {
-			      font-size: 25px;
-			      font-weight: 900;
-			      letter-spacing: 5px;
-			      color: #404040;
-			      padding-top: 15px;
-			  }
-			#home:hover {
-			      color: #1abc9c;
-			  }
-			img.home {
-			      padding-bottom: 0.2em;
-			      height: 1em;
-			  }
-		</style>
+	</head>
+	<style>
+		html, body { /*Optional, outside size of web page*/
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 600px;
+			background-color: #F8F8F8;
+		    min-width: 450px;
+		    font-family: lato, Helvetica, sans-serif;
+		}
+		#map_canvas {
+			width: 100%; /*full width of web page*/
+			height: 95%; /*full height of web page*/
+		}
+		a {
+		    text-decoration: none !important;
+		}
+		li {
+		    text-align: left;
+		}
+		li a {
+		    color: #F8F8F8;
+		}
+		li a:hover{
+		    color: #1abc9c;
+		}
+		h1 {
+		    font-size: 200%;
+		  }
+		h2 {
+		    font-size: 150%;
+		  }
+		h3 {
+		    font-size: 125%;
+		  }
+		.about {
+		      color: #404040;
+		      font-size: 100%;
+		      font-weight: normal;
+		      line-height: 1.5em;
+		      text-align: left;
+		  }
+		.container {
+		      padding-top: 0.25em;
+		      padding-bottom: 0.5em;
+		      margin-left: 0;
+		  }
+		.container-fluid {
+		      padding-top: 5em;
+		      padding-bottom: 10em;
+		  }
+		.container-footer {
+		      padding-top: 1em;
+		      padding-bottom: 1em;
+		  }
+		.bg-1 {
+		      background-color: #F8F8F8;
+		      color: #404040;
+		  }
+		.bg-2 {
+		      background-color: #404040;
+		      color: white;
+		  }
+		.navbar {
+		      padding-top: 5px;
+		      padding-bottom: 0px;
+		      border: 0;
+		      border-radius: 0;
+		      margin-bottom: 0;
+		      font-size: 15px;
+		      letter-spacing: 1px;
+		  }
+		.navbar-nav  li a:hover {
+		    color: #1abc9c !important;
+		  }
+		.navbar a {
+		      font-size: 15px;
+		      letter-spacing: 1px;
+		  }
+		.navbar-brand {
+		    transform: translateX(-50%);
+		    left: 50%;
+		    position: absolute;
+		  }
+		#home {
+		      font-size: 25px;
+		      font-weight: 900;
+		      letter-spacing: 5px;
+		      color: #404040;
+		      padding-top: 15px;
+		  }
+		#home:hover {
+		      color: #1abc9c;
+		  }
+		img.home {
+		      padding-bottom: 0.2em;
+		      height: 1em;
+		  }
+	</style>
 
 	<body onload="initialize()">
 		<nav class="navbar bg-1 navbar-default">
@@ -141,12 +141,12 @@
 			</div>
 		  </div>
 		</nav>
-		<h2 style="font-weight: bold;"><center>Let's go to Germany (via Berlin)!</center></h2>
+		<h2 style="font-weight: bold;"><center>Let's go to Eastern Europe (via Sofia, Athens, and Bucharest)!</center></h2>
 		<div id = "map_canvas"></div>
 
 		<script>
 		// web service URL
-		var DATA_SERVICE_URL = "https://script.google.com/macros/s/AKfycbxGVyseMJyqtsADkT60FuVQUVEcBm2DwIKHQV8rvpTAnyEt0NMM/exec?jsonp=callback";
+		var DATA_SERVICE_URL = "https://script.google.com/macros/s/AKfycbw74ktH2vI6Ov-_8fT2ECpRtlEF1207l32NAyowMzLKGvpZPFyR/exec?jsonp=callback";
 		var map;
 		var startZoom = 2;
 		var startLat = 0; // only executed once anyways, not continuous execution loop
@@ -193,9 +193,9 @@
 						'<h2>Title: <span style="font-weight:lighter;">' + data[i][titleColumn] + '</span></h2>' +
 						'<h2>Duration: <span style="font-weight:lighter;">' + data[i][durationColumn] + '</span></h2>' +
 						'<h2>Opening hours: <span style="font-weight:lighter;">' + data[i][timeColumn] + '</span></h2>' +
-						'<h2>Cost: <span style="font-weight:lighter;">' + data[i][costColumn] + ' EUR </span></h2>' +
+						'<h2>Cost: <span style="font-weight:lighter;">' + data[i][costColumn] + ' </span></h2>' +
 						'<h2>Location: <span style="font-weight:lighter;">' + data[i][locationColumn] + '</span></h2>' +
-						'<h2>Notes: <span style="font-weight:lighter;">' + data[i][otherColumn] + '</span></h2>' +
+						'<p><h2>Notes: <span style="font-weight:lighter;">' + data[i][otherColumn] + '</span></h2><p>' +
 						'</div>';
 					var marker = new google.maps.Marker({ // display marker icon on map
 						position: new google.maps.LatLng(data[i][latColumn], data[i][lngColumn]), // longlat coordinates from Sheets, columns 8 and 9
@@ -219,9 +219,9 @@
 			console.log("Finis.");
 
 			// ***Reset starting coordinates to cluster area***
-			startLat = data[2][9];
-			startLng = data[2][8];
-			startZoom = 12;
+			startLat = data[5][9];
+			startLng = data[5][8];
+			startZoom = 11;
 		}
 		</script>
 		<script> console.log("Finis, vraiment.") // executed first before callback below </script>
@@ -229,9 +229,9 @@
   type="text/javascript"></script>
 		<!-- Note: API key has an enforced quota, please don't spam requests -->
 
-		<div class="container-footer text-center">
-			<p>© 2019 Raymond Yu</p>
-		</div>
+	<div class="container-footer text-center">
+		<p>© 2019 Raymond Yu</p>
+	</div>
 
 	</body>
 </html>
