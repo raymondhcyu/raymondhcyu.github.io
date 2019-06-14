@@ -189,12 +189,17 @@
 				}
 				else {
 					infoLink = data[i][linkColumn];
+					var str = 'Information';
+					if (data[i][titleColumn] == 'Airbnb') {
+						infoLink = "https://www.airbnb.ca";
+						str = 'Airbnb';
+					}
 					if (infoLink == '') {
 						infoLink = "https://www.google.ca"
+						str = 'Google';
 						console.log("No link.")
 					}
 					// *** content for infowindow ***
-					var str = 'Information';
 					var contentString = '<div id = "content">' +
 						'<h2>Title: <span style="font-weight:lighter;">' + data[i][titleColumn] + '</span></h2>' +
 						'<h2>Duration: <span style="font-weight:lighter;">' + data[i][durationColumn] + '</span></h2>' +
