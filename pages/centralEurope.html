@@ -189,14 +189,14 @@
 				}
 				else {
 					infoLink = data[i][linkColumn];
-					var str = 'Information';
-					if (data[i][titleColumn] == 'Airbnb') {
+					var str = 'Information'; // default value
+					if (data[i][titleColumn] == 'Airbnb') { // check to see if title is Airbnb
 						infoLink = "https://www.airbnb.ca";
-						str = 'Airbnb';
+						str = 'Airbnb'; // set display link to Airbnb
 					}
-					if (infoLink == '') {
+					if (infoLink == '') { // check if empty
 						infoLink = "https://www.google.ca"
-						str = 'Google';
+						str = 'Google'; // set display link to Google
 						console.log("No link.")
 					}
 					// *** content for infowindow ***
