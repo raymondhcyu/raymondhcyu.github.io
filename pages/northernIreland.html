@@ -166,6 +166,23 @@
 			document.getElementsByTagName('head')[0].appendChild(scriptElement); // unsure what this does
 		}
 
+		// if (navigator.geolocation) {
+		//   navigator.geolocation.getCurrentPosition(function(position) {
+        //     var pos = {
+        //       lat: position.coords.latitude,
+        //       lng: position.coords.longitude
+        //     };
+		//
+        //     // geoInfoWindow.setPosition(pos);
+        //     // geoInfoWindow.setContent('Location found.');
+        //     // geoInfoWindow.open(map);
+        //     map.setCenter(pos);
+		// 	console.log("You current position is: " + pos);
+		//
+        //   }, function() {
+        //   });
+        // }
+
 		function callback(data) {
 			var i = 0;
 			var latColumn = 9; // enter column number for latitude coordinate from sheets
