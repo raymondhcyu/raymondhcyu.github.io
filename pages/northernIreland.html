@@ -167,7 +167,6 @@
 		}
 
 		function callback(data) {
-
 			// Get user position
 			if (navigator.geolocation) {
 			  navigator.geolocation.getCurrentPosition(function(position) {
@@ -178,12 +177,10 @@
 					  return this[Object.keys(this)[n]];
 				  }
 	            };
-
 				var geoIcon = {
 				    url: "../images/mapMarkerBlue.png",
 				    scaledSize: new google.maps.Size(35, 40), // scaled size
 				};
-
 				var geoMarker = new google.maps.Marker({ // display marker icon on map
 					position: new google.maps.LatLng(pos.key(0), pos.key(1)),
 					map: map, // referred to map
@@ -194,10 +191,11 @@
 				console.log("Your current position is: " + pos.key(0) + ", " + pos.key(1));
 	          }, function() {
 	          });
-		  } else {
+		  	} else {
 			  console.log("User location permission denied.");
-		  }
+		  	}
 
+			// Populate map with data from Sheets
 			var i = 0;
 			var latColumn = 9; // enter column number for latitude coordinate from sheets
 			var lngColumn = 8; // enter column number for longitude coordinate from sheets
