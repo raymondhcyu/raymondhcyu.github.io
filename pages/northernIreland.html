@@ -168,6 +168,7 @@
 
 		function callback(data) {
 
+			// Get user position
 			if (navigator.geolocation) {
 			  navigator.geolocation.getCurrentPosition(function(position) {
 	            var pos = {
@@ -180,7 +181,7 @@
 
 				var geoIcon = {
 				    url: "../images/mapMarkerBlue.png",
-				    scaledSize: new google.maps.Size(40, 50), // scaled size
+				    scaledSize: new google.maps.Size(35, 40), // scaled size
 				};
 
 				var geoMarker = new google.maps.Marker({ // display marker icon on map
@@ -189,23 +190,13 @@
 					icon: geoIcon, // rescaled custom blue icon
 					title: "Your location", // name for icon
 				});
-
-				// var marker = new google.maps.Marker({ // display marker icon on map
-				// 	position: new google.maps.LatLng(data[i][latColumn], data[i][lngColumn]), // longlat coordinates from Sheets, columns 8 and 9
-				// 	map: map, // referred to map
-				// 	animation: google.maps.Animation.DROP,
-				// 	title: data[i][titleColumn], // name for icon
-				// 	htmlContent: contentString
-				// });
-
-	            // geoInfoWindow.setPosition(pos);
-	            // geoInfoWindow.setContent('Location found.');
-	            // geoInfoWindow.open(map);
 	            map.setCenter(pos);
 				console.log("Your current position is: " + pos.key(0) + ", " + pos.key(1));
 	          }, function() {
 	          });
-	        }
+		  } else {
+			  console.log("User location permission denied.");
+		  }
 
 			var i = 0;
 			var latColumn = 9; // enter column number for latitude coordinate from sheets
