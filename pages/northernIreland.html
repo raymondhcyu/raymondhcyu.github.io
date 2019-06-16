@@ -178,9 +178,15 @@
 				  }
 	            };
 
+				var geoIcon = {
+				    url: "../images/mapMarkerBlue.png",
+				    scaledSize: new google.maps.Size(40, 50), // scaled size
+				};
+
 				var geoMarker = new google.maps.Marker({ // display marker icon on map
 					position: new google.maps.LatLng(pos.key(0), pos.key(1)),
 					map: map, // referred to map
+					icon: geoIcon, // rescaled custom blue icon
 					animation: google.maps.Animation.DROP,
 					title: "Your location", // name for icon
 				});
