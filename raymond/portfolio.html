@@ -68,7 +68,6 @@ h2 {
     padding-top: 3em;
     padding-bottom: 0em;
     margin-left: 20%;
-    left: 20%;
     width: 60%;
 }
 .container-footer {
@@ -87,6 +86,10 @@ h2 {
     background-color: #F8F8F8;
     color: #404040;
 }
+.modal-dialog {
+    width: 70%;
+}
+
 #raymond {
     font-size: 20px;
     font-weight: 900;
@@ -109,7 +112,6 @@ h2 {
 </head>
 
 <body>
-
     <nav class="navbar bg-1 navbar-default">
       <div class="container">
         <div class="navbar-header">
@@ -130,21 +132,101 @@ h2 {
       </div>
     </nav>
 
-<div class="container-fluid bg-2 text-center">
-    <h2 style="text-align: left;">DRONE SYSTEMS</h2>
-</div>
+    <div class="container-fluid bg-2 text-center">
+        <h2 style="text-align: left;">DRONE SYSTEMS</h2>
+        <div class="row">
 
-<div class="container-fluid bg-2 text-center">
-    <h2 style="text-align: left;">VIRTUAL & AUGMENTED REALITY</h2>
-</div>
+            <div class="col-md-6 col-lg-4">
+              <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div class="portfolio-item-caption-content text-center text-white">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-responsive col-xs-12" src="img/raven.jpg" alt="Raven">
+              </div>
+            </div>
 
-<div class="container-fluid bg-2 text-center">
-    <h2 style="text-align: left;">OTHER</h2>
-</div>
+            <div class="col-md-6 col-lg-4">
+              <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div class="portfolio-item-caption-content text-center text-white">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-responsive col-xs-12" src="img/vg.png" alt="">
+              </div>
+            </div>
 
-<div class="container-footer text-center">
-    <p>© 2019 Raymond Yu</p>
-</div>
+            <div class="col-md-6 col-lg-4">
+              <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                  <div class="portfolio-item-caption-content text-center text-white">
+                    <i class="fas fa-plus fa-3x"></i>
+                  </div>
+                </div>
+                <img class="img-responsive col-xs-12" src="img/atd.png" alt="">
+              </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid bg-2 text-center">
+        <h2 style="text-align: left;">VIRTUAL & AUGMENTED REALITY</h2>
+    </div>
+
+    <div class="container-fluid bg-2 text-center">
+        <h2 style="text-align: left;">OTHER</h2>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document" >
+
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="container-fluid" style="margin-left: 10%; width:80%">
+                        <div class="row justify-content-center">
+                            <div class="col-lg">
+                            <!-- Portfolio Modal - Title -->
+                            <h2 class="portfolio-modal-title">UAS TEAM</h2>
+
+                            <!-- Insert screenshots -->
+                            <img src="img/team.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+
+                            <h2>OVERVIEW</h2>
+                            <p align="left">
+                                On UBC UAS, I developed innovative unmanned aircraft and their support
+                                systems, such as 2m wide heavy-lift quadcopters and antenna tracking stations,
+                                while incorporating new technologies like centimeter-accurate RTK GNSS and
+                                augmented reality prototyping tools. My passion for aerospace led me to
+                                become a project manager and then the captain of the entire group of 35
+                                students; I led the team to a podium finish at a national competition for the first
+                                time in the team’s history.
+                            </p>
+
+                            <h2>CONTINUED</h2>
+                            <p align="left">
+                                I also spearheaded development efforts of a multi-mission UAV technology
+                                demonstrator to explore VTOL technologies, by modifying the airframe and
+                                performing aerodynamics and load analyses in wind tunnels and simulations.
+                                This aircraft created a foundation for future UAS projects, inspiring growth and
+                                innovation.
+                            </p>
+                            <p align="left">
+                                The team website can be viewed at <u><a href="https://www.ubcuas.com">www.ubcuas.com</a></u>.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-footer text-center">
+        <p>© 2019 Raymond Yu</p>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
