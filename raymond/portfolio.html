@@ -116,7 +116,7 @@ h2 {
 #raymond:hover {
     color: #17365D;
 }
-.portfolio-display {
+.portfolio-display, .gallery-display {
     padding-top: 0.5em;
     padding-bottom: 1.5em;
 }
@@ -158,10 +158,6 @@ h2 {
     border: none;
     margin-bottom: -4em;
 }
-.modal-body {
-    /* z-index: -1;
-    position: relative; */
-}
 .modal-footer {
     border: none;
     text-align: center;
@@ -174,6 +170,68 @@ h2 {
 }
 .align-right {
     text-align: right;
+}
+.ALBA-pics {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+    background-color: #404040;
+    opacity: 0.4;
+}
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 3px 0 0 3px;
+    user-select: none;
+    -webkit-user-select: none;
+    text-decoration: none;
+    background-color: #404040;
+    opacity: 0.4;
+}
+.prev:hover, .next:hover {
+    color: white;
+    background-color: #404040;
+    opacity: 0.8;
+    text-decoration: none;
+}
+.gallery-main {
+    padding-bottom: 1em;
+    object-fit: scale-down;
+    max-height: 500px;
+}
+.gallery-sub {
+    padding-bottom: 1em;
+    max-height: 250px;
+    object-fit: scale-down;
+}
+.cursor {
+    cursor: pointer;
 }
 </style>
 </head>
@@ -200,15 +258,13 @@ h2 {
     </div>
 </nav>
 
-<!-- Change the disclaimer to a notification -->
-<!-- Rescale images of same ratio to smaller pixel size -->
-
 <div class="container-fluid bg-2">
     <h2 style="text-align: left; margin-top: 1em;"></h2> 
     <p style="text-align: left;">Please see below for a somewhat comprehensive list
         of projects I worked on! <br><br>Also please note that details are broader for experiences
         obtained while in industry, especially for the manned aircraft section in order to comply
-        with NDAs. All media shown is in the public domain.</p>
+        with NDAs. All media shown is either in the public domain or from my personal collection which
+        I have permission to use.</p>
 </div>
 
 <div class="container-fluid bg-2 text-center">
@@ -459,10 +515,35 @@ h2 {
                 <div class="row justify-content-center">
                     <div class="col-lg">
                         <h2 class="align-center">AIRBUS FLIGHT PHYSICS & PROTOSPACE ALBATROSSONE</h2>
-                        <img src="img/ALBA.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+                        
+                        <div class="col-lg-12 col-xs-12">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <div class="ALBA-pics">
+                                <img src="img/ALBA1.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="ALBA-pics">
+                                <img src="img/ALBA2.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="ALBA-pics">
+                                <img src="img/ALBA3.jpg" class="img-rounded gallery-main" width="100%" style="padding-top: 3em; padding-bottom: 3em;">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="demo cursor gallery-sub" src="img/ALBA1.jpg" style="width:100%" onclick="currentSlide(1)" alt="In flight">
+                          </div>
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="demo cursor gallery-sub" src="img/ALBA2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Overhead">
+                        </div>
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="demo cursor gallery-sub" src="img/ALBA3.jpg" style="width:100%" onclick="currentSlide(3)" alt="On the flight line">
+                        </div>
+
                         <h2 class="align-right">&nbsp;</h2>
                         <p style="text-align: left;">
-                            The AlbatrossONE is a research vehicle used as a testbed to explore semi-aeroelastic hinge technologies.
+                            The Airbus <a href="https://www.airbus.com/newsroom/stories/the-albatross-is-inspiring-tomorrows-next-generation-of-aircraft-wings.html">AlbatrossONE</a> 
+                            is a research vehicle used as a testbed to explore semi-aeroelastic hinge technologies.
                             Working in the rapid prototyping environment of Airbus protospace, I developed... 
                         </p> 
                     </div>
@@ -584,5 +665,45 @@ h2 {
 <div class="container-footer text-center">
     <p>© 2020 Raymond Yu</p>
 </div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("ALBA-pics");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
 </body>
 </html>
