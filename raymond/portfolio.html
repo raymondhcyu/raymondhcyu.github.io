@@ -265,39 +265,32 @@ h2 {
 <div class="container-fluid bg-2 text-center">
     <h2 style="text-align: left;">UNMANNED AIRCRAFT</h2>
     <div class="row">
-        <div class="col-md-6 col-lg-4">
+        <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
             <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalALBA">
-                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                    <div class="portfolio-item-caption-content text-center text-white">
-                        <i class="fas fa-plus fa-3x"></i>
-                    </div>
+                <div class="portfolio-item-overlay">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
-            <img class="img-responsive col-xs-12" src="img/ALBA.jpg" alt="AlbatrossONE">
+                <a title="AlbatrossONE Flight Test Instrumentation"><img class="img-responsive" src="img/ALBA.jpg" alt="AlbatrossONE"></a>
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
             <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalRAVN">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
+                <div class="portfolio-item-overlay">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
-            </div>
-            <img class="img-responsive col-xs-12" src="img/raven.jpg" alt="Raven">
+                <a title="Raven Canopy"><img class="img-responsive" src="img/raven.jpg" alt="Raven"></a>
             </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
             <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalACDA">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
+                <div class="portfolio-item-overlay">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
-            </div>
-            <img class="img-responsive col-xs-12" src="img/atd.png" alt="Dessert Hawk">
+                <a title="Dessert Hawk Vortex Generators"><img class="img-responsive" src="img/atd.png" alt="Dessert Hawk"></a>
             </div>
         </div>
-
     </div>
 </div>
 
@@ -307,51 +300,6 @@ h2 {
 
 <div class="container-fluid bg-2 text-center">
     <h2 style="text-align: left;">COURSE PROJECTS</h2>
-</div>
-
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-xl" role="document" >
-        <div class="modal-content">
-            <!-- Not working :( -->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">
-                    <i class="fas fa-times"></i>
-                </span>
-            </button>
-            <div class="modal-body text-center">
-                <div class="container-fluid" style="margin-left: 10%; width:80%">
-                    <div class="row justify-content-center">
-                        <div class="col-lg">
-                            <h2 class="portfolio-modal-title">UAS TEAM</h2>
-                            <img src="img/team.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
-                            <h2>OVERVIEW</h2>
-                            <p style="text-align: left;">
-                                On UBC UAS, I developed innovative unmanned aircraft and their support
-                                systems, such as 2m wide heavy-lift quadcopters and antenna tracking stations,
-                                while incorporating new technologies like centimeter-accurate RTK GNSS and
-                                augmented reality prototyping tools. My passion for aerospace led me to
-                                become a project manager and then the captain of the entire group of 35
-                                students; I led the team to a podium finish at a national competition for the first
-                                time in the team’s history.
-                            </p>
-                            <img src="img/raven.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
-                            <h2>CONTINUED</h2>
-                            <p>
-                                I also spearheaded development efforts of a multi-mission UAV technology
-                                demonstrator to explore VTOL technologies, by modifying the airframe and
-                                performing aerodynamics and load analyses in wind tunnels and simulations.
-                                This aircraft created a foundation for future UAS projects, inspiring growth and
-                                innovation.
-                            </p>
-                            <p>
-                                The team website can be viewed at <u><a href="https://www.ubcuas.com">www.ubcuas.com</a></u>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <div class="portfolio-modal modal fade" id="portfolioModalA320" role="dialog">
@@ -492,6 +440,139 @@ h2 {
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModalALBA" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid" style="margin-left: 10%; width:80%">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <h2 class="align-center">AIRBUS FLIGHT PHYSICS & PROTOSPACE ALBATROSSONE</h2>
+                        <img src="img/ALBA.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+                        <h2 class="align-right">&nbsp;</h2>
+                        <p style="text-align: left;">
+                            The AlbatrossONE is a research vehicle used as a testbed to explore semi-aeroelastic hinge technologies.
+                            Working in the rapid prototyping environment of Airbus protospace, I developed... 
+                        </p> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModalRAVN" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid" style="margin-left: 10%; width:80%">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <h2 class="align-center">UBC UAS RAVEN</h2>
+                        <img src="img/raven.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+                        <h2 class="align-right">&nbsp;</h2>
+                        <p style="text-align: left;">
+                            The Raven is a large, high-endurance quadcopter with low disk loading with an intended application of
+                            being an aerial relay station for BVLOS drone operations built by the
+                            <a href="https://www.ubcuas.com">UBC UAS</a> design team. I developed...
+                        </p> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModalACDA" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid" style="margin-left: 10%; width:80%">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <h2 class="align-center">UBC UAS DESSERT HAWK</h2>
+                        <img src="img/atd.png" class="img-rounded" width="100%" style="padding-bottom: 10px">
+                        <h2 class="align-right">&nbsp;</h2>
+                        <p style="text-align: left;">
+                            The Dessert Hawk (intentional spelling) is a modified fixed-wing RC aircraft intended to compete at 
+                            AUVSI. With competition requirements to perform survey, payload delivery, and overfly sharp waypoints
+                            within the geofence, I led efforts for a VTOL conversion. Additionally, I designed vortex generators to 
+                            increase maneuverability and reduce stall speed. Although the full conversion did not complete due to
+                            time and test constraints, it provided... 
+                        </p> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document" >
+        <div class="modal-content">
+            <!-- Not working :( -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                    <i class="fas fa-times"></i>
+                </span>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container-fluid" style="margin-left: 10%; width:80%">
+                    <div class="row justify-content-center">
+                        <div class="col-lg">
+                            <h2 class="portfolio-modal-title">UAS TEAM</h2>
+                            <img src="img/team.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+                            <h2>OVERVIEW</h2>
+                            <p style="text-align: left;">
+                                On UBC UAS, I developed innovative unmanned aircraft and their support
+                                systems, such as 2m wide heavy-lift quadcopters and antenna tracking stations,
+                                while incorporating new technologies like centimeter-accurate RTK GNSS and
+                                augmented reality prototyping tools. My passion for aerospace led me to
+                                become a project manager and then the captain of the entire group of 35
+                                students; I led the team to a podium finish at a national competition for the first
+                                time in the team’s history.
+                            </p>
+                            <img src="img/raven.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+                            <h2>CONTINUED</h2>
+                            <p>
+                                I also spearheaded development efforts of a multi-mission UAV technology
+                                demonstrator to explore VTOL technologies, by modifying the airframe and
+                                performing aerodynamics and load analyses in wind tunnels and simulations.
+                                This aircraft created a foundation for future UAS projects, inspiring growth and
+                                innovation.
+                            </p>
+                            <p>
+                                The team website can be viewed at <u><a href="https://www.ubcuas.com">www.ubcuas.com</a></u>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
