@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="../images/letterR.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133543578-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -105,11 +106,13 @@ h2 {
 #raymond:hover {
     color: #17365D;
 }
-.page-header {
-
-}
 .portfolio-display {
     padding-bottom: 15px;
+}
+.portfolio-item, .portfolio-item-caption{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    background-color: aquamarine;
 }
 </style>
 </head>
@@ -137,16 +140,21 @@ h2 {
 </nav>
 
 <div class="container-fluid bg-2 text-center">
+    <!-- Change the disclaimer to a notification -->
+    <h2 style="text-align: left;"></h2> 
+    <p style="text-align: left;">Please see below for a somewhat comprehensive list
+        of projects I worked on! <br><br>Disclaimer: All media presented is in the public domain.</p>
+
     <h2 style="text-align: left;">MANNED AIRCRAFT</h2>
     <div class="row">
         <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
             <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalA320">
-                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-120 w-120">
+                <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                     <div class="portfolio-item-caption-content text-center text-white">
                         <i class="fas fa-plus fa-3x"></i>
                     </div>
-                </div>
-                <img class="img-responsive" src="img/A320NEO.jpg" alt="A320NEO">
+                </div> -->
+                <a title="A320"><img class="img-responsive" src="img/A320NEO.jpg" alt="A320"></a>
             </div>
         </div>
 
@@ -158,7 +166,7 @@ h2 {
                 </div>
             </div>
             </div> -->
-            <img class="img-responsive" src="img/A320NEO.jpg" alt="A320NEO">
+            <img class="img-responsive" src="img/A350XWB.jpg" alt="A350 XWB">
 
         </div>
 
@@ -170,7 +178,7 @@ h2 {
                 </div>
             </div>
             </div> -->
-            <img class="img-responsive" src="img/A320NEO.jpg" alt="A320NEO">
+            <img class="img-responsive" src="img/A350XWB.jpg" alt="A380">
 
         </div>
 
@@ -182,7 +190,7 @@ h2 {
                 </div>
             </div>
             </div> -->
-            <img class="img-responsive" src="img/A320NEO.jpg" alt="A320NEO">
+            <img class="img-responsive" src="img/C130.JPG" alt="C130">
 
         </div>
 
@@ -194,7 +202,7 @@ h2 {
                 </div>
             </div>
             </div> -->
-            <img class="img-responsive" src="img/A320NEO.jpg" alt="A320NEO">
+            <img class="img-responsive" src="img/CP140.jpg" alt="CP140">
 
         </div>
 
