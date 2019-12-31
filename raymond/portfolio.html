@@ -109,10 +109,29 @@ h2 {
 .portfolio-display {
     padding-bottom: 15px;
 }
-.portfolio-item, .portfolio-item-caption{
+.portfolio-item {
     cursor: pointer;
+    /* position: absolute; */
+    size: inherit;
+    opacity: 100%;
     transition: all 0.2s ease-in-out;
-    background-color: aquamarine;
+    background-color: whitesmoke;
+    text-align: center;
+}
+.portfolio-item:hover {
+    opacity: 75%;
+}
+.portfolio-item:hover .fa-plus{
+    opacity: 100%;
+}
+.fa-plus {
+    position: absolute;
+    color: #F8F8F8;
+    font-size: 5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
 }
 </style>
 </head>
@@ -149,11 +168,9 @@ h2 {
     <div class="row">
         <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
             <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalA320">
-                <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                    <div class="portfolio-item-caption-content text-center text-white">
-                        <i class="fas fa-plus fa-3x"></i>
-                    </div>
-                </div> -->
+                <div class="portfolio-item-overlay">
+                    <i class="fa fa-plus"></i>
+                </div>
                 <a title="A320"><img class="img-responsive" src="img/A320NEO.jpg" alt="A320"></a>
             </div>
         </div>
@@ -321,7 +338,7 @@ h2 {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
                             <img src="img/A320NEO.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
-                            <h2>Details</h2>
+                            <h2>DETAILS</h2>
                             <p style="text-align: left;">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </p>
