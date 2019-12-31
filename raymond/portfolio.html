@@ -6,8 +6,16 @@
     <title>Raymond Yu | Portfolio</title>
     <link rel="icon" type="image/png" href="../images/letterR.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/bf224b65a7.js" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133543578-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -39,6 +47,11 @@ h2 {
     font-size: 140%;
     font-weight: normal;
     letter-spacing: 1px;
+    border-bottom: 0.1vw solid #E8E8E8;
+    padding-bottom: 0.25em;
+    margin-top: -1em;
+}
+.h2-blank {
     border-bottom: 0.1vw solid #E8E8E8;
     padding-bottom: 0.25em;
     margin-top: -1em;
@@ -84,14 +97,10 @@ h2 {
     background-color: #F8F8F8;
     color: #404040;
 }
-.bg-3 {
-    background-color: #F8F8F8;
-    color: #404040;
-}
 .modal-dialog {
+    margin-left: 15%;
     width: 70%;
 }
-
 #raymond {
     font-size: 20px;
     font-weight: 900;
@@ -135,6 +144,37 @@ h2 {
     transform: translate(-50%, -50%);
     opacity: 0%;
 }
+.close {
+    position: relative;
+    z-index: 1;
+    margin-top: 0.5em;
+    margin-right: 0.25em;
+    font-size: 3em;
+}
+.close:hover {
+    cursor: pointer;
+}
+.modal-header {
+    border: none;
+    margin-bottom: -4em;
+}
+.modal-body {
+    /* z-index: -1;
+    position: relative; */
+}
+.modal-footer {
+    border: none;
+    text-align: center;
+}
+.align-left {
+    text-align: left;
+}
+.align-center {
+    text-align: center;
+}
+.align-right {
+    text-align: right;
+}
 </style>
 </head>
 
@@ -175,7 +215,7 @@ h2 {
         <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
             <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalA320">
                 <div class="portfolio-item-overlay">
-                    <i class="fa fa-plus"></i>
+                    <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
                 <a title="A320"><img class="img-responsive" src="img/A320NEO.jpg" alt="A320"></a>
             </div>
@@ -317,9 +357,7 @@ h2 {
         <div class="modal-content">
             <!-- Not working :( -->
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">
-                    <i class="fas fa-times"></i>
-                </span>
+                <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body text-center">
                 <div class="container-fluid" style="margin-left: 10%; width:80%">
@@ -380,7 +418,7 @@ h2 {
                     <i class="fas fa-times"></i>
                 </span>
             </button>
-            <div class="modal-body text-center">
+            <div class="modal-body">
                 <div class="container-fluid" style="margin-left: 10%; width:80%">
                     <div class="row justify-content-center">
                         <div class="col-lg">
@@ -398,11 +436,36 @@ h2 {
     </div>
 </div>
 
+<div class="portfolio-modal modal fade" id="portfolioModalCP140" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid" style="margin-left: 10%; width:80%">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <h2 class="align-center">LOCKHEED CP140</h2>
+                        <img src="img/CP140.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+                        <h2 class="align-right">&nbsp;</h2>
+                        <p style="text-align: left;">
+                            As a co-op at Cascade Aerospace, I supported a project to modernize the CP140 maritime patrol aircraft,
+                            in both a project management and technical design capacity. 
+                        </p> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+</div>
+
 <div class="container-footer text-center">
     <p>© 2020 Raymond Yu</p>
 </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </body>
 </html>
