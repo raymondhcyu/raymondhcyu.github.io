@@ -7,10 +7,6 @@
     <link rel="icon" type="image/png" href="../images/letterR.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -172,9 +168,9 @@ h2 {
     text-align: right;
 }
 .ALBA-pics {
-  display: none;
-  margin-left: auto;
-  margin-right: auto;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 .prev {
     cursor: pointer;
@@ -335,7 +331,7 @@ h2 {
                 <div class="portfolio-item-overlay">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
-                <a title="Raven Canopy"><img class="img-responsive" src="img/raven.jpg" alt="Raven"></a>
+                <a title="Raven Canopy"><img class="img-responsive" src="img/RAVN.jpg" alt="Raven"></a>
             </div>
         </div>
 
@@ -517,8 +513,6 @@ h2 {
                         <h2 class="align-center">AIRBUS FLIGHT PHYSICS & PROTOSPACE ALBATROSSONE</h2>
                         
                         <div class="col-lg-12 col-xs-12">
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
                             <div class="ALBA-pics">
                                 <img src="img/ALBA1.jpg" class="img-rounded gallery-main" width="100%">
                             </div>
@@ -528,6 +522,14 @@ h2 {
                             <div class="ALBA-pics">
                                 <img src="img/ALBA3.jpg" class="img-rounded gallery-main" width="100%" style="padding-top: 3em; padding-bottom: 3em;">
                             </div>
+
+                            <script>console.log("Here1")</script>
+                            <a class="prev" onclick="plusSlides(-1, 'ALBA-pics')">&#10094;</a>
+                            <script>console.log("Here2")</script>
+
+                            <a class="next" onclick="plusSlides(1, 'ALBA-pics')">&#10095;</a>
+                            <script>console.log("Here3")</script>
+
                         </div>
 
                         <div class="col-lg-4 col-xs-4">
@@ -568,7 +570,10 @@ h2 {
                 <div class="row justify-content-center">
                     <div class="col-lg">
                         <h2 class="align-center">UBC UAS RAVEN</h2>
-                        <img src="img/raven.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+
+                        <img src="img/RAVN.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+
+                        
                         <h2 class="align-right">&nbsp;</h2>
                         <p style="text-align: left;">
                             The Raven is a large, high-endurance quadcopter with low disk loading with an intended application of
@@ -642,7 +647,7 @@ h2 {
                                 students; I led the team to a podium finish at a national competition for the first
                                 time in the team’s history.
                             </p>
-                            <img src="img/raven.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+                            <img src="img/RAVN.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
                             <h2>CONTINUED</h2>
                             <p>
                                 I also spearheaded development efforts of a multi-mission UAV technology
@@ -667,41 +672,53 @@ h2 {
 </div>
 
 <script>
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlides(slideIndex, 'ALBA-pics');
+showSlides(slideIndex, 'RAVN-pics');
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusSlides(n, name) {
+    showSlides(slideIndex += n, name);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentSlide(n, name) {
+    showSlides(slideIndex = n, name);
 }
 
-function showSlides(n) {
+function showSlides(n, name) {
     var i;
-    var slides = document.getElementsByClassName("ALBA-pics");
+    var slides = document.getElementsByClassName(name);
+
+    console.log(slides);
+
     var dots = document.getElementsByClassName("demo");
     var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+
+    console.log("Here10")
+
+    if (n > slides.length) {
+        slideIndex = 1;
+        console.log("Here11");
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+        console.log("Here12");
+    }
+    console.log("Here12.5");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
+        console.log("Here13");
     }
+    console.log("Here13.5");
+
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
+        console.log("Here14");
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
+    console.log("Here15");
+
 }
 </script>
 
