@@ -331,7 +331,7 @@ h2 {
         </div>
 
         <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalRAVN" onclick="plusSlides(0, 'RAVN-pics')">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalRAVN" onclick="modalGalleryDeployOnceRavn()">
                 <div class="portfolio-item-overlay">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
@@ -515,7 +515,6 @@ h2 {
                 <div class="row justify-content-center">
                     <div class="col-lg">
                         <h2 class="align-center">AIRBUS FLIGHT PHYSICS & PROTOSPACE ALBATROSSONE</h2>
-                        
                         <div class="col-lg-12 col-xs-12">
                             <div class="ALBA-pics">
                                 <img src="img/ALBA1.jpg" class="img-rounded gallery-main" width="100%">
@@ -526,17 +525,14 @@ h2 {
                             <div class="ALBA-pics">
                                 <img src="img/ALBA3.jpg" class="img-rounded gallery-main" width="100%" style="padding-top: 3em; padding-bottom: 3em;">
                             </div>
-
                             <script>console.log("Here1")</script>
                             <a class="prev" onclick="plusSlidesAlba(-1)">&#10094;</a>
                             <script>console.log("Here2")</script>
                             <a class="next" onclick="plusSlidesAlba(1)">&#10095;</a>
                             <script>console.log("Here3")</script>
-
                             <div class="modal-caption">
                                 <p id="ALBA-caption"></p>
                             </div>
-
                         </div>
 
                         <div class="col-lg-4 col-xs-4">
@@ -589,22 +585,21 @@ h2 {
                                 <img src="img/RAVN3.jpg" class="img-rounded gallery-main" width="100%" style="padding-top: 3em; padding-bottom: 3em;">
                             </div>
 
-                            <script>console.log("Here41")</script>
-                            <a class="prev" onclick="plusSlides(-1, 'RAVN-pics')">&#10094;</a>
-                            <script>console.log("Here42")</script>
-                            <a class="next" onclick="plusSlides(1, 'RAVN-pics')">&#10095;</a>
-                            <script>console.log("Here43")</script>
-
+                            <a class="prev" onclick="plusSlidesRavn(-1, 'RAVN-pics')">&#10094;</a>
+                            <a class="next" onclick="plusSlidesRavn(1, 'RAVN-pics')">&#10095;</a>
+                            <div class="modal-caption">
+                                <p id="RAVN-caption"></p>
+                            </div>
                         </div>
 
                         <div class="col-lg-4 col-xs-4">
-                            <img class="cursor gallery-sub" src="img/RAVN1.jpg" style="width:100%" onclick="currentSlide(1)" alt="In flight">
+                            <img class="RAVN-dots cursor gallery-sub" src="img/RAVN1.jpg" style="width:100%" onclick="currentSlideRavn(1)" alt="Raven canopy">
                           </div>
                         <div class="col-lg-4 col-xs-4">
-                            <img class="cursor gallery-sub" src="img/RAVN2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Overhead">
+                            <img class="RAVN-dots cursor gallery-sub" src="img/RAVN2.jpg" style="width:100%" onclick="currentSlideRavn(2)" alt="At Southport airfield">
                         </div>
                         <div class="col-lg-4 col-xs-4">
-                            <img class="cursor gallery-sub" src="img/RAVN3.jpg" style="width:100%" onclick="currentSlide(3)" alt="On the flight line">
+                            <img class="RAVN-dots cursor gallery-sub" src="img/RAVN3.jpg" style="width:100%" onclick="currentSlideRavn(3)" alt="Manufacturing process">
                         </div>
                         
                         <h2 class="align-right">&nbsp;</h2>
