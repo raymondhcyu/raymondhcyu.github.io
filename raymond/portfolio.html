@@ -6,20 +6,19 @@
     <title>Raymond Yu | Portfolio</title>
     <link rel="icon" type="image/png" href="../images/letterR.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <script src="https://kit.fontawesome.com/bf224b65a7.js" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133543578-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-133543578-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-133543578-1');
     </script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="scripts/ImageGallery.js" text="text/javascript"></script>
 
 <style>
 body {
@@ -303,7 +302,7 @@ h2 {
                 <div class="portfolio-item-overlay">
                     <i class="fa fa-plus"></i>
                 </div>
-                <a title="C130 HVAC"><img class="img-responsive" src="img/C130.JPG" alt="C130"></a>
+                <a title="C130 HVAC"><img class="img-responsive" src="img/C130.jpg" alt="C130"></a>
             </div>
         </div>
 
@@ -323,7 +322,7 @@ h2 {
     <h2 style="text-align: left;">UNMANNED AIRCRAFT</h2>
     <div class="row">
         <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalALBA" onclick="plusSlides(0, 'ALBA-pics')">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalALBA" onclick="modalGalleryDeployOnceAlba()">
                 <div class="portfolio-item-overlay">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
@@ -529,21 +528,25 @@ h2 {
                             </div>
 
                             <script>console.log("Here1")</script>
-                            <a class="prev" onclick="plusSlides(-1, 'ALBA-pics')">&#10094;</a>
+                            <a class="prev" onclick="plusSlidesAlba(-1)">&#10094;</a>
                             <script>console.log("Here2")</script>
-                            <a class="next" onclick="plusSlides(1, 'ALBA-pics')">&#10095;</a>
+                            <a class="next" onclick="plusSlidesAlba(1)">&#10095;</a>
                             <script>console.log("Here3")</script>
 
+                            <div class="modal-caption">
+                                <p id="ALBA-caption"></p>
+                            </div>
+
                         </div>
 
                         <div class="col-lg-4 col-xs-4">
-                            <img class="cursor gallery-sub" src="img/ALBA1.jpg" style="width:100%" onclick="currentSlide(1)" alt="In flight">
+                            <img class="ALBA-dots cursor gallery-sub" src="img/ALBA1.jpg" style="width:100%" onclick="currentSlideAlba(1)" alt="In flight">
                           </div>
                         <div class="col-lg-4 col-xs-4">
-                            <img class="cursor gallery-sub" src="img/ALBA2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Overhead">
+                            <img class="ALBA-dots cursor gallery-sub" src="img/ALBA2.jpg" style="width:100%" onclick="currentSlideAlba(2)" alt="Overhead">
                         </div>
                         <div class="col-lg-4 col-xs-4">
-                            <img class="cursor gallery-sub" src="img/ALBA3.jpg" style="width:100%" onclick="currentSlide(3)" alt="On the flight line">
+                            <img class="ALBA-dots cursor gallery-sub" src="img/ALBA3.jpg" style="width:100%" onclick="currentSlideAlba(3)" alt="On the flight line">
                         </div>
 
                         <h2 class="align-right">&nbsp;</h2>
@@ -700,54 +703,6 @@ h2 {
 <div class="container-footer text-center">
     <p>© 2020 Raymond Yu</p>
 </div>
-
-<script>
-var slideIndex = 1;
-
-function plusSlides(n, name) {
-    showSlides(slideIndex += n, name);
-}
-
-function currentSlide(n, name) {
-    showSlides(slideIndex = n, name);
-}
-
-function showSlides(n, name) {
-    var i;
-    var slides = document.getElementsByClassName(name);
-
-    console.log(slides);
-
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption");
-
-    console.log("Here10")
-
-    if (n > slides.length) {
-        slideIndex = 1;
-        console.log("Here11");
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-        console.log("Here12");
-    }
-    console.log("Here12.5");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        console.log("Here13");
-    }
-    console.log("Here13.5");
-
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-        console.log("Here14");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
-    console.log("Here15");
-}
-</script>
 
 </body>
 </html>
