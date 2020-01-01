@@ -172,6 +172,11 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
+.RAVN-pics {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
 .prev {
     cursor: pointer;
     position: absolute;
@@ -318,7 +323,7 @@ h2 {
     <h2 style="text-align: left;">UNMANNED AIRCRAFT</h2>
     <div class="row">
         <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalALBA">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalALBA" onclick="plusSlides(0, 'ALBA-pics')">
                 <div class="portfolio-item-overlay">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
@@ -327,7 +332,7 @@ h2 {
         </div>
 
         <div class="portfolio-display col-md-6 col-lg-4 col-xs-12">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalRAVN">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalRAVN" onclick="plusSlides(0, 'RAVN-pics')">
                 <div class="portfolio-item-overlay">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
@@ -526,20 +531,19 @@ h2 {
                             <script>console.log("Here1")</script>
                             <a class="prev" onclick="plusSlides(-1, 'ALBA-pics')">&#10094;</a>
                             <script>console.log("Here2")</script>
-
                             <a class="next" onclick="plusSlides(1, 'ALBA-pics')">&#10095;</a>
                             <script>console.log("Here3")</script>
 
                         </div>
 
                         <div class="col-lg-4 col-xs-4">
-                            <img class="demo cursor gallery-sub" src="img/ALBA1.jpg" style="width:100%" onclick="currentSlide(1)" alt="In flight">
+                            <img class="cursor gallery-sub" src="img/ALBA1.jpg" style="width:100%" onclick="currentSlide(1)" alt="In flight">
                           </div>
                         <div class="col-lg-4 col-xs-4">
-                            <img class="demo cursor gallery-sub" src="img/ALBA2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Overhead">
+                            <img class="cursor gallery-sub" src="img/ALBA2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Overhead">
                         </div>
                         <div class="col-lg-4 col-xs-4">
-                            <img class="demo cursor gallery-sub" src="img/ALBA3.jpg" style="width:100%" onclick="currentSlide(3)" alt="On the flight line">
+                            <img class="cursor gallery-sub" src="img/ALBA3.jpg" style="width:100%" onclick="currentSlide(3)" alt="On the flight line">
                         </div>
 
                         <h2 class="align-right">&nbsp;</h2>
@@ -571,8 +575,34 @@ h2 {
                     <div class="col-lg">
                         <h2 class="align-center">UBC UAS RAVEN</h2>
 
-                        <img src="img/RAVN.jpg" class="img-rounded" width="100%" style="padding-bottom: 10px">
+                        <div class="col-lg-12 col-xs-12">
+                            <div class="RAVN-pics">
+                                <img src="img/RAVN1.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="RAVN-pics">
+                                <img src="img/RAVN2.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="RAVN-pics">
+                                <img src="img/RAVN3.jpg" class="img-rounded gallery-main" width="100%" style="padding-top: 3em; padding-bottom: 3em;">
+                            </div>
 
+                            <script>console.log("Here41")</script>
+                            <a class="prev" onclick="plusSlides(-1, 'RAVN-pics')">&#10094;</a>
+                            <script>console.log("Here42")</script>
+                            <a class="next" onclick="plusSlides(1, 'RAVN-pics')">&#10095;</a>
+                            <script>console.log("Here43")</script>
+
+                        </div>
+
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="cursor gallery-sub" src="img/RAVN1.jpg" style="width:100%" onclick="currentSlide(1)" alt="In flight">
+                          </div>
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="cursor gallery-sub" src="img/RAVN2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Overhead">
+                        </div>
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="cursor gallery-sub" src="img/RAVN3.jpg" style="width:100%" onclick="currentSlide(3)" alt="On the flight line">
+                        </div>
                         
                         <h2 class="align-right">&nbsp;</h2>
                         <p style="text-align: left;">
@@ -673,8 +703,6 @@ h2 {
 
 <script>
 var slideIndex = 1;
-showSlides(slideIndex, 'ALBA-pics');
-showSlides(slideIndex, 'RAVN-pics');
 
 function plusSlides(n, name) {
     showSlides(slideIndex += n, name);
@@ -718,7 +746,6 @@ function showSlides(n, name) {
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
     console.log("Here15");
-
 }
 </script>
 
