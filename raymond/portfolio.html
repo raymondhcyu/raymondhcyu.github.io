@@ -168,7 +168,7 @@ h2 {
 .align-right {
     text-align: right;
 }
-.ALBA-pics, .RAVN-pics, .ACDA-pics, .MAP-pics {
+.ALBA-pics, .RAVN-pics, .ACDA-pics, .MAP-pics, .INDU-pics {
     display: none;
     margin-left: auto;
     margin-right: auto;
@@ -841,11 +841,8 @@ h2 {
                             <div class="MAP-pics">
                                 <img src="img/MAP2.jpg" class="img-rounded gallery-main" width="100%">
                             </div>
-                            <script>console.log("Here1")</script>
                             <a class="prev" onclick="plusSlidesMap(-1)">&#10094;</a>
-                            <script>console.log("Here2")</script>
                             <a class="next" onclick="plusSlidesMap(1)">&#10095;</a>
-                            <script>console.log("Here3")</script>
                             <div class="modal-caption">
                                 <p id="MAP-caption"></p>
                             </div>
@@ -878,6 +875,67 @@ h2 {
         </div>
     </div>
 </div>
+
+<div class="portfolio-modal modal fade" id="portfolioModalINDU" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid" style="margin-left: 10%; width:80%">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <h2 class="align-center">INDUCTION CHARGING UNIT</h2>
+                        <div class="col-lg-12 col-xs-12">
+                            <div class="INDU-pics">
+                                <img src="img/INDU1.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="INDU-pics">
+                                <img src="img/INDU2.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="INDU-pics">
+                                <img src="img/INDU.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <a class="prev" onclick="plusSlidesIndu(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlidesIndu(1)">&#10095;</a>
+                            <div class="modal-caption">
+                                <p id="INDU-caption"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="INDU-dots cursor gallery-sub" src="img/INDU1.jpg" style="width:100%" onclick="currentSlideIndu(1)" alt="Main">
+                            </div>
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="INDU-dots cursor gallery-sub" src="img/INDU2.jpg" style="width:100%;" onclick="currentSlideIndu(2)" alt="Live Location">
+                            </div>
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="INDU-dots cursor gallery-sub" src="img/INDU.jpg" style="width:100%;" onclick="currentSlideIndu(2)" alt="Live Location">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <h2 class="align-right">&nbsp;</h2>
+                            <p style="text-align: left;">
+                                Wanting to avoid the nuisance of tangled wires when charging my phone, I attempted to make a wireless 
+                                induction charging station.
+                            </p> 
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+
 
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-xl" role="document" >
