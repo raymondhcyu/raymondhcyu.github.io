@@ -4,8 +4,8 @@
     as argument (e.g. ALBA-pics and RAVN-pics), breaks the flow.
 */
 
-var slideIndexAlba, slideIndexRavn, slideIndexAcda;
-slideIndexAlba = slideIndexRavn = slideIndexAcda = 1;
+var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq;
+slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = 1;
 
 // Alba project functions
 function modalGalleryDeployOnceAlba() {
@@ -117,4 +117,169 @@ function showSlidesAcda(n) {
     slides[slideIndexAcda-1].style.display = "block";
     dots[slideIndexAcda-1].className += " active";
     captionText.innerHTML = dots[slideIndexAcda-1].alt;
+}
+
+// Map project functions
+function modalGalleryDeployOnceMap() {
+    showSlidesMap(slideIndexMap);
+}
+function plusSlidesMap(n) {
+    showSlidesMap(slideIndexMap += n);
+}
+function currentSlideMap(n) {
+    showSlidesMap(slideIndexMap = n);
+}
+function showSlidesMap(n) {
+    var i;
+    var slides = document.getElementsByClassName("MAP-pics");
+    var dots = document.getElementsByClassName("MAP-dots");
+    var captionText = document.getElementById("MAP-caption");
+
+    if (n > slides.length) {
+        slideIndexMap = 1;
+    }
+    if (n < 1) {
+        slideIndexMap = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndexMap-1].style.display = "block";
+    dots[slideIndexMap-1].className += " active";
+    captionText.innerHTML = dots[slideIndexMap-1].alt;
+}
+
+// Indu project functions
+function modalGalleryDeployOnceIndu() {
+    showSlidesIndu(slideIndexIndu);
+}
+function plusSlidesIndu(n) {
+    showSlidesIndu(slideIndexIndu += n);
+}
+function currentSlideIndu(n) {
+    showSlidesIndu(slideIndexIndu = n);
+}
+function showSlidesIndu(n) {
+    var i;
+    var slides = document.getElementsByClassName("INDU-pics");
+    var dots = document.getElementsByClassName("INDU-dots");
+    var captionText = document.getElementById("INDU-caption");
+
+    if (n > slides.length) {
+        slideIndexIndu = 1;
+    }
+    if (n < 1) {
+        slideIndexIndu = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndexIndu-1].style.display = "block";
+    dots[slideIndexIndu-1].className += " active";
+    captionText.innerHTML = dots[slideIndexIndu-1].alt;
+}
+
+// Gcat project functions
+function modalGalleryDeployOnceGcat() {
+    showSlidesGcat(slideIndexGcat);
+}
+function plusSlidesGcat(n) {
+    showSlidesGcat(slideIndexGcat += n);
+}
+function currentSlideGcat(n) {
+    showSlidesGcat(slideIndexGcat = n);
+}
+function showSlidesGcat(n) {
+    var i;
+    var slides = document.getElementsByClassName("GCAT-pics");
+    var dots = document.getElementsByClassName("GCAT-dots");
+    var captionText = document.getElementById("GCAT-caption");
+
+    if (n > slides.length) {
+        slideIndexGcat = 1;
+    }
+    if (n < 1) {
+        slideIndexGcat = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndexGcat-1].style.display = "block";
+    dots[slideIndexGcat-1].className += " active";
+    captionText.innerHTML = dots[slideIndexGcat-1].alt;
+}
+
+// Rckt project functions
+function modalGalleryDeployOnceRckt() {
+    showSlidesRckt(slideIndexRckt);
+}
+function plusSlidesRckt(n) {
+    showSlidesRckt(slideIndexRckt += n);
+}
+function currentSlideRckt(n) {
+    showSlidesRckt(slideIndexRckt = n);
+}
+function showSlidesRckt(n) {
+    var i;
+    var slides = document.getElementsByClassName("RCKT-pics");
+    var dots = document.getElementsByClassName("RCKT-dots");
+    var captionText = document.getElementById("RCKT-caption");
+
+    if (n > slides.length) {
+        slideIndexRckt = 1;
+    }
+    if (n < 1) {
+        slideIndexRckt = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndexRckt-1].style.display = "block";
+    dots[slideIndexRckt-1].className += " active";
+    captionText.innerHTML = dots[slideIndexRckt-1].alt;
+}
+
+// Bdaq project functions
+function modalGalleryDeployOnceBdaq() {
+    showSlidesBdaq(slideIndexBdaq);
+}
+function plusSlidesBdaq(n) {
+    showSlidesBdaq(slideIndexBdaq += n);
+}
+function currentSlideBdaq(n) {
+    showSlidesBdaq(slideIndexBdaq = n);
+}
+function showSlidesBdaq(n) {
+    var i;
+    var slides = document.getElementsByClassName("BDAQ-pics");
+    var dots = document.getElementsByClassName("BDAQ-dots");
+    var captionText = document.getElementById("BDAQ-caption");
+
+    if (n > slides.length) {
+        slideIndexBdaq = 1;
+    }
+    if (n < 1) {
+        slideIndexBdaq = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndexBdaq-1].style.display = "block";
+    dots[slideIndexBdaq-1].className += " active";
+    captionText.innerHTML = dots[slideIndexBdaq-1].alt;
 }
