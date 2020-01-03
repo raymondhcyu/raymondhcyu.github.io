@@ -1099,6 +1099,8 @@ h2 {
                             You're on it now! <br><br>As I always wondered how websites are made, I decided to create my own website
                             instead of using a template. I used HTML, CSS, JS, Bootstrap, and enabled Google Analytics. 
                             (I use NameCheap, CloudFlare, and GitHub for the domain, security, and hosting, respectively.)
+                            <br><br>
+                            Comments or suggestions? Feel free to contact me!
                         </p> 
                     </div>
                 </div>
@@ -1132,6 +1134,90 @@ h2 {
                             vehicle mechanics. My role on the mechatronics team is to create the control systems and electrical system,
                             in addition to data validation and analytics. 
                         </p> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModalBDAQ" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid" style="margin-left: 10%; width:80%">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <h2 class="align-center">INTEGRATED CYCLING DAQ SYSTEM</h2>
+                        <div class="col-lg-12 col-xs-12">
+                            <div class="BDAQ-pics">
+                                <img src="img/BDAQ1.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="BDAQ-pics">
+                                <img src="img/BDAQ2.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="BDAQ-pics">
+                                <img src="img/BDAQ3.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="BDAQ-pics">
+                                <img src="img/BDAQ4.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="BDAQ-pics">
+                                <img src="img/BDAQ5.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="BDAQ-pics">
+                                <img src="img/BDAQ6.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <a class="prev" onclick="plusSlidesBdaq(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlidesBdaq(1)">&#10095;</a>
+                            <div class="modal-caption">
+                                <p id="BDAQ-caption"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="BDAQ-dots cursor gallery-sub" src="img/BDAQ1.jpg" style="width:100%" onclick="currentSlideBdaq(1)" alt="Strain gauge hidden under right brake lever">
+                            </div>
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="BDAQ-dots cursor gallery-sub" src="img/BDAQ2.jpg" style="width:100%;" onclick="currentSlideBdaq(2)" alt="Electrical system, from breadboard to protoboard (MSP430 underneath) to housing">
+                            </div>
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="BDAQ-dots cursor gallery-sub" src="img/BDAQ3.jpg" style="width:100%;" onclick="currentSlideBdaq(3)" alt="Brief electrical schematic (additional peripherals like FTDI, oscillator, filters, etc. not included)">
+                            </div>
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="BDAQ-dots cursor gallery-sub" src="img/BDAQ4.jpg" style="width:100%;" onclick="currentSlideBdaq(4)" alt="Android application for receiving and saving ESP32 data via BlueTooth">
+                            </div>
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="BDAQ-dots cursor gallery-sub" src="img/BDAQ5.jpg" style="width:100%;" onclick="currentSlideBdaq(5)" alt="Test run from GoPro footage with app overlay (note the brake indication LED)">
+                            </div>
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="BDAQ-dots cursor gallery-sub" src="img/BDAQ6.jpg" style="width:100%;" onclick="currentSlideBdaq(6)" alt="Test run plot on map (extracted from phone GPS)">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <h2 class="align-right">&nbsp;</h2>
+                            <p style="text-align: left;">
+                                For the MECH423 Mechatronics Product Design course final project, I created a performance cycling DAQ unit. 
+                                <br><br>
+                                I programmed an MSP430 to collect and transmit accelerometer and brake pressure data to an ESP32, before
+                                broadcasting it over BlueTooth to a custom Android application I developed. Each data packet is populated
+                                with time, longitude, and latitude from the phone GPS before being saved to a CSV file for analysis.
+                                LEDs on the handlebar indicated brake activation, and if brakes are applied during a turn, an audible warning
+                                is emitted from the app. Ingress protection is ensured by a modified water bottle housing the custom 
+                                perfboard circuit I made, mil-spec wiring, and automotive-grade connectors. The entire system was extensively
+                                tested in the rain on sidewalks and streets, validating the product. 
+                            </p> 
+                        </div>
+
                     </div>
                 </div>
             </div>
