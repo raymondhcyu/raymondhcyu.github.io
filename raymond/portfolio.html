@@ -272,9 +272,8 @@ h2 {
         </li> -->
         <br><br>
         Also please note that details are broader for experiences
-        obtained while in industry, especially for the manned aircraft section in order to comply
-        with NDAs. All media shown is either in the public domain or from my personal collection which
-        I have permission to use.</p>
+        obtained while in industry, especially for the manned aircraft section, in order to comply with NDAs. 
+        All media shown is either in the public domain and copywrite-free, or I have permission to use it.</p>
 </div>
 
 <div class="container-fluid bg-2 text-center">
@@ -354,6 +353,15 @@ h2 {
                     <i class="fa fa-plus" aria-hidden="true"></i>
                 </div>
                 <a title="Dessert Hawk Vortex Generators"><img class="img-responsive" src="img/ACDA.jpg" alt="Dessert Hawk"></a>
+            </div>
+        </div>
+
+        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalSPOT" onclick="modalGalleryDeployOnceSpot()">
+                <div class="portfolio-item-overlay">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </div>
+                <a title="UAV Ground Support"><img class="img-responsive" src="img/SPOT.jpg" alt="Ground Support"></a>
             </div>
         </div>
     </div>
@@ -648,9 +656,9 @@ h2 {
 
                         <h2 class="align-right">&nbsp;</h2>
                         <p style="text-align: left;">
-                            The Airbus <a href="https://www.airbus.com/newsroom/stories/the-albatross-is-inspiring-tomorrows-next-generation-of-aircraft-wings.html">AlbatrossONE</a> 
+                            The <a href="https://www.airbus.com/newsroom/stories/the-albatross-is-inspiring-tomorrows-next-generation-of-aircraft-wings.html">AlbatrossONE</a> 
                             is a research vehicle used as a testbed to explore semi-aeroelastic hinge technologies.
-                            Working in the rapid prototyping environment of Airbus protospace, I developed... 
+                            Working in the rapid prototyping environment of Protospace, I developed... 
                             - RF characterization
                             - Flight test data processing
                             - Computer vision script
@@ -714,6 +722,66 @@ h2 {
                             being an aerial relay station for BVLOS drone operations built by the
                             <a href="https://www.ubcuas.com">UBC UAS</a> design team. I developed...
                         </p> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModalSPOT" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid" style="margin-left: 10%; width:80%">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <h2 class="align-center">UAV GROUND SUPPORT</h2>
+                        <div class="col-lg-12 col-xs-12">
+                            <div class="SPOT-pics">
+                                <img src="img/SPOT1.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="SPOT-pics">
+                                <img src="img/SPOT2.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="SPOT-pics">
+                                <img src="img/SPOT3.jpg" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <a class="prev" onclick="plusSlidesSpot(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlidesSpot(1)">&#10095;</a>
+                            <div class="modal-caption">
+                                <p id="SPOT-caption"></p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="SPOT-dots cursor gallery-sub" src="img/SPOT1.jpg" style="width:100%" onclick="currentSlideSpot(1)" alt="Main">
+                            </div>
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="SPOT-dots cursor gallery-sub" src="img/SPOT2.jpg" style="width:100%;" onclick="currentSlideSpot(2)" alt="Live Location">
+                            </div>
+                            <div class="col-lg-4 col-xs-4">
+                                <img class="SPOT-dots cursor gallery-sub" src="img/SPOT3.jpg" style="width:100%;" onclick="currentSlideSpot(3)" alt="Live Location">
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <h2 class="align-right">&nbsp;</h2>
+                            <p style="text-align: left;">
+                                Experienced UAV ground support, as a operations manager, ground station operator, and spotter. 
+                                Countless flight operations on student design team, contract work, or in industry. 
+                                Held an SFOC for several years (before regulations changed).
+                            </p> 
+                        </div>
+
                     </div>
                 </div>
             </div>
