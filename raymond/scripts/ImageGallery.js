@@ -4,8 +4,8 @@
     as argument (e.g. ALBA-pics and RAVN-pics), breaks the flow.
 */
 
-var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot;
-slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = 1;
+var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot, slideIndexAkla;
+slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = slideIndexAkla = 1;
 
 // Alba project functions
 function modalGalleryDeployOnceAlba() {
@@ -315,4 +315,37 @@ function showSlidesSpot(n) {
     slides[slideIndexSpot-1].style.display = "block";
     dots[slideIndexSpot-1].className += " active";
     captionText.innerHTML = dots[slideIndexSpot-1].alt;
+}
+
+// Akla project functions
+function modalGalleryDeployOnceAkla() {
+    showSlidesAkla(slideIndexAkla);
+}
+function plusSlidesAkla(n) {
+    showSlidesAkla(slideIndexAkla += n);
+}
+function currentSlideAkla(n) {
+    showSlidesAkla(slideIndexAkla = n);
+}
+function showSlidesAkla(n) {
+    var i;
+    var slides = document.getElementsByClassName("AKLA-pics");
+    var dots = document.getElementsByClassName("AKLA-dots");
+    var captionText = document.getElementById("AKLA-caption");
+
+    if (n > slides.length) {
+        slideIndexAkla = 1;
+    }
+    if (n < 1) {
+        slideIndexAkla = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndexAkla-1].style.display = "block";
+    dots[slideIndexAkla-1].className += " active";
+    captionText.innerHTML = dots[slideIndexAkla-1].alt;
 }
