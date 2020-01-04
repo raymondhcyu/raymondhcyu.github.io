@@ -4,8 +4,8 @@
     as argument (e.g. ALBA-pics and RAVN-pics), breaks the flow.
 */
 
-var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq;
-slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = 1;
+var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot;
+slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = 1;
 
 // Alba project functions
 function modalGalleryDeployOnceAlba() {
@@ -282,4 +282,37 @@ function showSlidesBdaq(n) {
     slides[slideIndexBdaq-1].style.display = "block";
     dots[slideIndexBdaq-1].className += " active";
     captionText.innerHTML = dots[slideIndexBdaq-1].alt;
+}
+
+// Spot project functions
+function modalGalleryDeployOnceSpot() {
+    showSlidesSpot(slideIndexSpot);
+}
+function plusSlidesSpot(n) {
+    showSlidesSpot(slideIndexSpot += n);
+}
+function currentSlideSpot(n) {
+    showSlidesSpot(slideIndexSpot = n);
+}
+function showSlidesSpot(n) {
+    var i;
+    var slides = document.getElementsByClassName("SPOT-pics");
+    var dots = document.getElementsByClassName("SPOT-dots");
+    var captionText = document.getElementById("SPOT-caption");
+
+    if (n > slides.length) {
+        slideIndexSpot = 1;
+    }
+    if (n < 1) {
+        slideIndexSpot = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndexSpot-1].style.display = "block";
+    dots[slideIndexSpot-1].className += " active";
+    captionText.innerHTML = dots[slideIndexSpot-1].alt;
 }
