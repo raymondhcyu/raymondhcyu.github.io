@@ -260,9 +260,7 @@ h2 {
 
 <div class="container-fluid bg-2">
     <h2 style="text-align: left; margin-top: 1em;"></h2> 
-    <p style="text-align: left;">Please see below for a somewhat comprehensive gallery
-        of projects I worked on! 
-        
+    <p style="text-align: left;">
         <!-- My key skills include: <br>
         <li>
             Test instrumentation
@@ -273,10 +271,8 @@ h2 {
         <li>
             Data analytics
         </li> -->
-        <br><br>
-        Also please note that details are broader for experiences
-        obtained while in industry, especially for the manned aircraft section, in order to comply with NDAs. 
-        All media shown is either in the public domain and copywrite-free, or I have permission to use it.</p>
+        Note: To comply with NDAs, all media displayed are in the public domain, free of copywrite, or permission was acquired for use.
+    </p>
 </div>
 
 <div class="container-fluid bg-2 text-center">
@@ -1021,8 +1017,17 @@ h2 {
                         <div class="col-xs-12">
                             <h2 class="align-right">&nbsp;</h2>
                             <p style="text-align: left;">
-                                To help me plan and navigate during my travels, I developed a webapp to...
-                                Maximized my time working in Europe by traveling often, I realized that...
+                                To help plan and coordinate my travels in Europe with friends, I developed an interactive 
+                                web-based map utility with Google Maps API, Google Scripts, JavaScript, CSS, and HTML. 
+                                Travel information like opening hours, cost, and facts are all updated live from Sheets
+                                (which I use to organize my trip beforehand anyways). 
+                                Scripts automatically search for the street address and latitude/longitude coordinates to 
+                                reduce manual input, and display the live user location. <br><br>
+                                
+                                While I only realized that a customizable map was already released by Google <i>after</i> this was 
+                                created, this project was nonetheless an engaging experience. To increase practicality, 
+                                new features such as showing the user’s device orientation and calculating navigation directions 
+                                with Directions API can be added. The webapp can be viewed at: <a href="https://quaternion.me/pages/" target="_blank">quaternion.me/pages</a>
                             </p> 
                         </div>
 
@@ -1082,7 +1087,12 @@ h2 {
                             <h2 class="align-right">&nbsp;</h2>
                             <p style="text-align: left;">
                                 Wanting to avoid the nuisance of tangled wires when charging my phone, I attempted to make a wireless 
-                                induction charging station.
+                                induction charging station. I designed the circuit using online tutorials, forums, and class notes, 
+                                with components sourced from DigiKey. Raspberry Pi and logic gates used to provide PWM to H-bridge 
+                                and to regulate voltage. Induction was optimized by maximizing the Q factor at ~150kHz according to 
+                                the coil datasheet, and I calculated the capacitance required for magnetic resonance. <br><br>
+                                Although an improvement would be to move the circuit onto PCB (probably going to be clunky) 
+                                and actually charge my phone, I think that it'd be neat if I can study and transfer energy via Qi standards.
                             </p> 
                         </div>
 
@@ -1131,10 +1141,10 @@ h2 {
 
                         <div class="row">
                             <div class="col-lg-4 col-xs-4">
-                                <img class="GCAT-dots cursor gallery-sub" src="img/GCAT.jpg" style="width:100%" onclick="currentSlideGcat(1)" alt="SolidWorks rendering">
+                                <img class="GCAT-dots cursor gallery-sub" src="img/GCAT.jpg" style="width:100%" onclick="currentSlideGcat(1)" alt="SolidWorks rendering with a Zaber A-MCB2 stepper motor driver">
                             </div>
                             <div class="col-lg-4 col-xs-4">
-                                <img class="GCAT-dots cursor gallery-sub" src="img/GCAT1.jpg" style="width:100%;" onclick="currentSlideGcat(2)" alt="Completed unit (Mk2)">
+                                <img class="GCAT-dots cursor gallery-sub" src="img/GCAT1.jpg" style="width:100%;" onclick="currentSlideGcat(2)" alt="Completed unit (Mk2), note the white IMU housing on the mounting tube">
                             </div>
                             <div class="col-lg-4 col-xs-4">
                                 <img class="GCAT-dots cursor gallery-sub" src="img/GCAT2.jpg" style="width:100%;" onclick="currentSlideGcat(3)" alt="Completed unit (Mk1)">
@@ -1147,7 +1157,18 @@ h2 {
                         <div class="col-xs-12">
                             <h2 class="align-right">&nbsp;</h2>
                             <p style="text-align: left;">
-                                To enable a reliable datalink between ground control and UBC UAS drones, ...
+                                To enable a reliable datalink between ground control and UBC UAS drones, a directional antenna 
+                                needs to be pointed at them. The Ground Control Antenna Tracking Station (GCATS) can support a 
+                                high-throughput datalink so images and videos can be sent live to the ground for processing,
+                                instead of waiting for the drone to land and remove the SD card for post-processing. Multiple 
+                                evolutions of the GCATS was deployed at UAV competitions, tracking drones and relaying mission data. <br><br>
+
+                                I designed, tested, and manufactured the Mk1 and Mk2 models, and calculated operating parameters 
+                                dependent on drone and RF performance. I also developed a feedback loop with an IMU and performed experiments 
+                                to test the motor torque, GPS and IMU accuracy, and signal attenuation. High-resolution rotation 
+                                in yaw and pitch was achieved using stepper motors and timing belts. A software program developed
+                                by the UAS software team parsed GPS coordinates from MAVLink and commanded the station 
+                                to rotate and minimize the vector difference between the drone and the ground.
                             </p> 
                         </div>
 
@@ -1189,6 +1210,9 @@ h2 {
                             <div class="RCKT-pics">
                                 <img src="img/RCKT4.jpg" class="img-rounded gallery-main" width="100%">
                             </div>
+                            <div class="RCKT-pics">
+                                <img src="img/rocketGIFresized.gif" class="img-rounded gallery-main" width="100%">
+                            </div>
                             <a class="prev" onclick="plusSlidesRckt(-1)">&#10094;</a>
                             <a class="next" onclick="plusSlidesRckt(1)">&#10095;</a>
                         </div>
@@ -1213,12 +1237,19 @@ h2 {
                             <div class="col-lg-4 col-xs-4">
                                 <img class="RCKT-dots cursor gallery-sub" src="img/RCKT4.jpg" style="width:100%;" onclick="currentSlideRckt(5)" alt="Doodles!">
                             </div>
+                            <div class="col-lg-4 col-xs-4" style="max-height: 200px;">
+                                <img class="RCKT-dots cursor gallery-sub" src="img/rocketGIFresized.gif" style="width:100%; max-height: 10em !important;" onclick="currentSlideRckt(6)" alt="Motor test GIF">
+                            </div>
                         </div>
 
                         <div class="col-xs-12">
                             <h2 class="align-right">&nbsp;</h2>
                             <p style="text-align: left;">
-                                As a final project for a highschool AP chemistry project, I created a...
+                                As a final project for a highschool AP chemistry project, I created a solid fuel hobby rocket
+                                The fuel cell comprised of potassium nitrate, sugar, and sulphur, while aerodynamic surfaces 
+                                were 3-D printed. Flame-retardant paper lined the interior to protect the fuselage against the 
+                                delayed parachute charge. I tested individual subsystems like the parachute and motor using 
+                                estimated flight parameters.
                             </p> 
                         </div>
 
@@ -1249,9 +1280,9 @@ h2 {
                         <p style="text-align: left;">
                             You're on it now! <br><br>As I always wondered how websites are made, I decided to create my own website
                             instead of using a template. I used HTML, CSS, JS, Bootstrap, and enabled Google Analytics. 
-                            (I use NameCheap, CloudFlare, and GitHub for the domain, security, and hosting, respectively.)
+                            (Using NameCheap, CloudFlare, and GitHub for the domain, security, and hosting, respectively.)
                             <br><br>
-                            Comments or suggestions? Feel free to contact me!
+                            Comments or suggestions? Feel free to let me know!
                         </p> 
                     </div>
                 </div>
