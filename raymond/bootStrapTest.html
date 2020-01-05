@@ -49,6 +49,11 @@
   .navbar-nav  li a:hover {
     color: #1abc9c !important;
   }
+  #myImg {
+  width: 100%;
+  height: auto;
+}
+
   </style>
 </head>
 <body>
@@ -105,6 +110,20 @@
     <div class="col-sm-4">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<div id="myModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <!-- Modal Content (The Image) -->
+      <img id="myImg" src="https://pbs.twimg.com/media/BU27_rrCYAAckFP.jpg" alt="Trolltunga, Norway">
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption">Modal Caption (Image Text)</div>
     </div>
   </div>
 </div>
