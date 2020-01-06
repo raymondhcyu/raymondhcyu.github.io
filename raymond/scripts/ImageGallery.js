@@ -4,8 +4,8 @@
     as argument (e.g. ALBA-pics and RAVN-pics), breaks the flow.
 */
 
-var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot, slideIndexAkla;
-slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = slideIndexAkla = 1;
+var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot, slideIndexAkla, slideIndexUas;
+slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = slideIndexAkla = slideIndexUas = 1;
 
 // Alba project functions
 function modalGalleryDeployOnceAlba() {
@@ -348,4 +348,37 @@ function showSlidesAkla(n) {
     slides[slideIndexAkla-1].style.display = "block";
     dots[slideIndexAkla-1].className += " active";
     captionText.innerHTML = dots[slideIndexAkla-1].alt;
+}
+
+// Uas project functions
+function modalGalleryDeployOnceUas() {
+    showSlidesUas(slideIndexUas);
+}
+function plusSlidesUas(n) {
+    showSlidesUas(slideIndexUas += n);
+}
+function currentSlideUas(n) {
+    showSlidesUas(slideIndexUas = n);
+}
+function showSlidesUas(n) {
+    var i;
+    var slides = document.getElementsByClassName("UAS-pics");
+    var dots = document.getElementsByClassName("UAS-dots");
+    var captionText = document.getElementById("UAS-caption");
+
+    if (n > slides.length) {
+        slideIndexUas = 1;
+    }
+    if (n < 1) {
+        slideIndexUas = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndexUas-1].style.display = "block";
+    dots[slideIndexUas-1].className += " active";
+    captionText.innerHTML = dots[slideIndexUas-1].alt;
 }
