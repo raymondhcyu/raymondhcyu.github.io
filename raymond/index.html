@@ -102,8 +102,10 @@ h2 {
 #raymond:hover {
     color: #17365D;
 }
-.page-header {
-
+@media only screen and (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }
 </style>
 </head>
@@ -122,8 +124,17 @@ h2 {
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="CV.pdf">RESUME</a></li>
-            <li><a href="PP.pdf">PORTFOLIO</a></li>
+            <li><a href="resumeh.html">RESUME</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" href="portfolio.html" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PORTFOLIO<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="portfolio.html#mannedAc">MANNED AIRCRAFT</a></li>
+                    <li><a href="portfolio.html#unmannedAc">UNMANNED AIRCRAFT</a></li>
+                    <li><a href="portfolio.html#vrar">VR & AR</a></li>
+                    <li><a href="portfolio.html#otherProjects">OTHER PROJECTS</a></li>
+                    <li><a href="portfolio.html#courseProjects">COURSE PROJECTS</a></li>
+                </ul>
+            </li>
             <li><a href="references.html">REFERENCES</a></li>
             <li><a href="contact.html">CONTACT</a></li>
           </ul>
@@ -143,9 +154,8 @@ h2 {
     particularly towards small UAS. The future skies will be much busier with unmanned aircraft, and my
     goal is to be part of their proliferation into society.
     <br><br>
-    I'm looking for a full-time job starting this summer - feel free to check out my portfolio and contact me 
+    I'm looking for a full-time job starting this summer - feel free to check out my <a href="portfolio.html">portfolio</a> and <a href="contact.html">contact me</a> 
     if I can help your organization!
-    <!-- <a href="portfolio.html">portfolio</a> -->
     <br><br>
     <i>Raymond</i>
     </p>
