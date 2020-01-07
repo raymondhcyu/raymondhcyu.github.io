@@ -109,6 +109,11 @@ h2 {
 .fab {
     transform: scale(1.2,1.2);
 }
+@media only screen and (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
 </style>
 </head>
 
@@ -126,8 +131,17 @@ h2 {
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-left">
-              <li><a href="CV.pdf">RESUME</a></li>
-              <li><a href="PP.pdf">PORTFOLIO</a></li>
+              <li><a href="resumeh.html">RESUME</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="portfolio.html" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PORTFOLIO<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#mannedAc">MANNED AIRCRAFT</a></li>
+                    <li><a href="#unmannedAc">UNMANNED AIRCRAFT</a></li>
+                    <li><a href="#vrar">VR & AR</a></li>
+                    <li><a href="#otherProjects">OTHER PROJECTS</a></li>
+                    <li><a href="#courseProjects">COURSE PROJECTS</a></li>
+                </ul>
+                </li>
               <li><a href="">REFERENCES</a></li>
               <li><a href="contact.html">CONTACT</a></li>
           </ul>
