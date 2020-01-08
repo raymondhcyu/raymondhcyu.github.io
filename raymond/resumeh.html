@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133543578-1"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -133,7 +135,7 @@ h2 {
           <ul class="nav navbar-nav navbar-left">
               <li><a href="#">RESUME</a></li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" href="portfolio.html" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PORTFOLIO<span class="caret"></span></a>
+                    <a class="dropdown-toggle" href="portfolio.html" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PORTFOLIO<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                     <li><a href="portfolio.html#mannedAC">MANNED AIRCRAFT</a></li>
                     <li><a href="portfolio.html#unmannedAC">UNMANNED AIRCRAFT</a></li>
@@ -214,7 +216,21 @@ h2 {
     <p>© 2020 Raymond Yu</p>
 </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+    $('.dropdown-toggle').click(function(e) {
+      if ($(document).width() > 768) {
+        e.preventDefault();
+    
+        var url = $(this).attr('href');
+    
+           
+        if (url !== '#') {
+          window.location.href = url;
+        }
+    
+      }
+    });
+</script>
+
 </body>
 </html>
