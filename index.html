@@ -3,19 +3,26 @@
 
 <head>
 
-<title>Access Control</title>
-<link rel="icon" type="image/png" href="images/letterR.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133557009-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-133557009-1');
-</script>
+  <title>Access Control</title>
+  <link rel="icon" type="image/png" href="images/letterR.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133557009-1"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-133557009-1');
+  </script>
 
 <style>
+  body {
+    background-color: white;
+    min-width: 300px;
+    font-family: oxygen, Helvetica, sans-serif;
+  }
   h1 {
     color: black;
     font-family: verdana;
@@ -31,38 +38,25 @@
   h3 {
     color: black;
     font-family: verdana;
-    font-size: 75%;
+    font-size: 85%;
   }
-
-  h4 {
-    color: black;
-    font-family: verdana;
-    font-size: 75%;
+  .special {
+    opacity: 0;
+  }
+  .special:hover {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
   }
 </style>
 </head>
 
 <body>
-  <div>
-    <!-- <h1><b><center>Work is on hold.</center></b></h1>
-    <h2><center><button onclick="button">This is a button.</button></center></h2>
-	-->
+  <div class="col-xs-12 text-center">
+    <h1>This website is access controlled. <br/> Enter login credentials below. </h1>
+	<br>
   </div>
-
-  <div style = "position: absolute; bottom: 0; right: 5; text-align:right;">
-    <h4><center>Last update: 13 January 2019</center></h4>
-  </div>
-
-  <script>
-  // insert JS here
-  // if you are reading this, kudos :)
-  </script>
-
-  <div><center>
-
-    <h1> This website is access controlled. <br/> Enter login credentials below. </h1>
-	<br><br>
-
+  <div class="col-xs-12 text-center special">
+  <br>
   <form>
     <h2>Username:</h2>
     <input type="text" name="username">
@@ -71,7 +65,11 @@
     <br>
   </form>
 	<br>
-	<button onclick="submitButton()">Submit</button>
+  <button onclick="submitButton()">Submit</button>
+  <br><br>
+  </div>
+
+  <div class="col-xs-12 text-center">
 	<p id="denied"></p>
 
 	<script>
@@ -89,6 +87,7 @@
 	<h3> Contact administrator or
 	<a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#113;&#117;&#097;&#116;&#101;&#114;&#110;&#105;&#111;&#110;&#046;&#109;&#101;" target="_top">support@quaternion.me</a>
 	for authorization. </h3>
+  </div>
 
 <!-- *** "Secret" button to link to travel planning page *** -->
     <br>
@@ -97,7 +96,15 @@
         <img src="images/white.png" width="100" height="100" title="Let's go traveling Europe!">
     </a></center>
 
-    </center></div>
+    <br>
+    <br>
+    <center><a href="https://quaternion.me/raymond">
+        <img src="images/white.png" width="100" height="100" title="Let's go to Raymond's website!">
+    </a></center>
+
+  <div class="col-xs-12 text-center" style="margin-top: 6em;">
+    <h3>Last update: 8 January 2020</h3>
+  </div>
 
 </body>
 </html>
