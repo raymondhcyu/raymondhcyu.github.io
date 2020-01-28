@@ -141,6 +141,15 @@ h2 {
     transform: translate(-50%, -50%);
     opacity: 0;
 }
+.overlay-text-efan {
+    position: absolute;
+    color: #F8F8F8;
+    font-size: 4.5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
 .close {
     position: relative;
     z-index: 1;
@@ -287,7 +296,7 @@ h2 {
 <div class="container-fluid bg-2">
     <h2 style="text-align: left; margin-top: 1em;"></h2> 
     <p style="text-align: left;">
-        Note: To comply with NDAs, all media displayed are in the public domain, free of copywrite, or permission was acquired for use.
+        Note: To comply with NDAs, all media displayed are in the public domain, free of copywrite, or permission was given for use.
     </p>
 </div>
 
@@ -318,6 +327,15 @@ h2 {
                     <p class="overlay-text short" aria-hidden="true"><b>A380</b></p>
                 </div>
                 <a title="A380 IoT"><img class="img-responsive" src="images/A380_icon.jpg" alt="A380"></a>
+            </div>
+        </div>
+
+        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalEFAN">
+                <div class="portfolio-item-overlay">
+                    <p class="overlay-text-efan long" aria-hidden="true" style="color: #404040 !important;"><b>E-Fan&nbsp;X</b></p>
+                </div>
+                <a title="E-Fan X Demonstrator"><img class="img-responsive" src="images/Efan_icon.jpg" alt="E-FAN X"></a>
             </div>
         </div>
 
@@ -569,6 +587,39 @@ h2 {
                             I had the opportunity to work with an advanced wireless/IoT sensing system and complete certification work 
                             on the A380 during my time at Airbus. I was also very fortunate to have sat in the cockpit of the
                             first aircraft built (MSN001) to complete my tasks!
+                        </p> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModalEFAN" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid" style="margin-left: 10%; width:80%">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <h2 class="align-center">AIRBUS E-FAN X</h2>
+                        <img src="images/Efan.jpg" class="img-rounded" width="100%">
+                        <h2 class="align-right">&nbsp;</h2>
+                        <p style="text-align: left;">
+                            The <a href=https://www.airbus.com/innovation/future-technology/electric-flight/e-fan-x.html target='_blank'>E-fan X</a> is a hybrid-electric technology demonstration aircraft
+                            built by Airbus, Siemens, and Rolls-Royce. I supported efforts to create a static display unit for the
+                            Paris Air Show 2019 by designing a scale model of the propulsion and electrical power conversion and
+                            distribution system.  
+                            <br><br>
+                            Note: I couldn't find any copywrite-free images of the E-Fan X, so the picture shows a similar BAe 146
+                            airframe which was used for the hybrid-electric conversion. 
                         </p> 
                     </div>
                 </div>
