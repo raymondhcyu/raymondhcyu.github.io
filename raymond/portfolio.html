@@ -279,8 +279,8 @@ h2 {
         <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PORTFOLIO<span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="#mannedAC">MANNED AIRCRAFT</a></li>
                 <li><a href="#unmannedAC">UNMANNED AIRCRAFT</a></li>
+                <li><a href="#mannedAC">MANNED AIRCRAFT</a></li>
                 <li><a href="#vrar">VR & AR</a></li>
                 <li><a href="#otherProjects">OTHER PROJECTS</a></li>
                 <li><a href="#courseProjects">COURSE PROJECTS</a></li>
@@ -298,6 +298,56 @@ h2 {
     <p style="text-align: left;">
         Note: To comply with NDAs, all media displayed are in the public domain, free of copywrite, or permission was given for use.
     </p>
+</div>
+
+<div class="container-fluid bg-2 text-center">
+    <h2 style="text-align: left;" id="unmannedAC">UNMANNED AIRCRAFT</h2>
+    <div class="row">
+        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalALBA" onclick="modalGalleryDeployOnceAlba()">
+                <div class="portfolio-item-overlay">
+                    <p class="overlay-text albalong" aria-hidden="true" style="color: #404040 !important;"><b>AlbatrossONE</b></p>
+                </div>
+                <a title="AlbatrossONE Flight Test Instrumentation"><img class="img-responsive" src="images/ALBA.jpg" alt="AlbatrossONE"></a>
+            </div>
+        </div>
+
+        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalRAVN" onclick="modalGalleryDeployOnceRavn()">
+                <div class="portfolio-item-overlay">
+                    <p class="overlay-text medium" aria-hidden="true"><b>Raven</b></p>
+                </div>
+                <a title="Raven Canopy"><img class="img-responsive" src="images/RAVN.jpg" alt="Raven"></a>
+            </div>
+        </div>
+
+        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalACDA" onclick="modalGalleryDeployOnceAcda()">
+                <div class="portfolio-item-overlay">
+                    <p class="overlay-text long" aria-hidden="true" style="color: #404040 !important;"><b>Dessert Hawk</b></p>
+                </div>
+                <a title="Dessert Hawk VTOL & Vortex Generators"><img class="img-responsive" src="images/ACDA_icon.jpg" alt="Dessert Hawk"></a>
+            </div>
+        </div>
+
+        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalUAS" onclick="modalGalleryDeployOnceUas()">
+                <div class="portfolio-item-overlay">
+                    <p class="overlay-text long" aria-hidden="true"><b>UAS Team</b></p>
+                </div>
+                <a title="UBC Unmanned Aircraft Systems Team"><img class="img-responsive" src="images/UAS_icon.jpg" alt="UBC UAS"></a>
+            </div>
+        </div>
+
+        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalSPOT" onclick="modalGalleryDeployOnceSpot()">
+                <div class="portfolio-item-overlay">
+                    <p class="overlay-text long" aria-hidden="true"><b>Ground Support</b></p>
+                </div>
+                <a title="UAV Ground Support"><img class="img-responsive" src="images/SPOT.jpg" alt="Ground Support"></a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container-fluid bg-2 text-center">
@@ -359,55 +409,7 @@ h2 {
     </div>
 </div>
 
-<div class="container-fluid bg-2 text-center">
-    <h2 style="text-align: left;" id="unmannedAC">UNMANNED AIRCRAFT</h2>
-    <div class="row">
-        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalALBA" onclick="modalGalleryDeployOnceAlba()">
-                <div class="portfolio-item-overlay">
-                    <p class="overlay-text albalong" aria-hidden="true" style="color: #404040 !important;"><b>AlbatrossONE</b></p>
-                </div>
-                <a title="AlbatrossONE Flight Test Instrumentation"><img class="img-responsive" src="images/ALBA.jpg" alt="AlbatrossONE"></a>
-            </div>
-        </div>
 
-        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalRAVN" onclick="modalGalleryDeployOnceRavn()">
-                <div class="portfolio-item-overlay">
-                    <p class="overlay-text medium" aria-hidden="true"><b>Raven</b></p>
-                </div>
-                <a title="Raven Canopy"><img class="img-responsive" src="images/RAVN.jpg" alt="Raven"></a>
-            </div>
-        </div>
-
-        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalACDA" onclick="modalGalleryDeployOnceAcda()">
-                <div class="portfolio-item-overlay">
-                    <p class="overlay-text long" aria-hidden="true" style="color: #404040 !important;"><b>Dessert Hawk</b></p>
-                </div>
-                <a title="Dessert Hawk VTOL & Vortex Generators"><img class="img-responsive" src="images/ACDA_icon.jpg" alt="Dessert Hawk"></a>
-            </div>
-        </div>
-
-        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalUAS" onclick="modalGalleryDeployOnceUas()">
-                <div class="portfolio-item-overlay">
-                    <p class="overlay-text long" aria-hidden="true"><b>UAS Team</b></p>
-                </div>
-                <a title="UBC Unmanned Aircraft Systems Team"><img class="img-responsive" src="images/UAS_icon.jpg" alt="UBC UAS"></a>
-            </div>
-        </div>
-
-        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalSPOT" onclick="modalGalleryDeployOnceSpot()">
-                <div class="portfolio-item-overlay">
-                    <p class="overlay-text long" aria-hidden="true"><b>Ground Support</b></p>
-                </div>
-                <a title="UAV Ground Support"><img class="img-responsive" src="images/SPOT.jpg" alt="Ground Support"></a>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="container-fluid bg-2 text-center">
     <h2 style="text-align: left;" id="vrar">VIRTUAL & AUGMENTED REALITY</h2>
@@ -959,10 +961,10 @@ h2 {
 
                         <div class="row">
                             <div class="col-lg-4 col-xs-4">
-                                <img class="SPOT-dots cursor gallery-sub" src="images/SPOT1.jpg" style="width:100%" onclick="currentSlideSpot(1)" alt="Supporting drone cinematography activities based from a small boat in Burrard Inlet">
+                                <img class="SPOT-dots cursor gallery-sub" src="images/SPOT1.jpg" style="width:100%" onclick="currentSlideSpot(1)" alt="Ground control operations (RTK GNSS on left with kinematic fix, MissionPlanner waypoints on right)">
                             </div>
                             <div class="col-lg-4 col-xs-4">
-                                <img class="SPOT-dots cursor gallery-sub" src="images/SPOT2.jpg" style="width:100%;" onclick="currentSlideSpot(2)" alt="Ground control operations (RTK GNSS on left with kinematic fix, MissionPlanner waypoints on right)">
+                                <img class="SPOT-dots cursor gallery-sub" src="images/SPOT2.jpg" style="width:100%;" onclick="currentSlideSpot(2)" alt="Supporting drone cinematography activities based from a small boat in Burrard Inlet">
                             </div>
                             <div class="col-lg-4 col-xs-4">
                                 <img class="SPOT-dots cursor gallery-sub" src="images/SPOT3.jpg" style="width:100%;" onclick="currentSlideSpot(3)" alt="Supporting more drone cinematography activities in urban environments on campus">
