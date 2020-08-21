@@ -4,8 +4,8 @@
     as argument (e.g. ALBA-pics and RAVN-pics), breaks the flow.
 */
 
-var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot, slideIndexAkla, slideIndexUas;
-slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = slideIndexAkla = slideIndexUas = 1;
+var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot, slideIndexAkla, slideIndexUas, slideIndexEcvt;
+slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = slideIndexAkla = slideIndexUas = slideIndexEcvt = 1;
 
 // Alba project functions
 function modalGalleryDeployOnceAlba() {
@@ -381,4 +381,37 @@ function showSlidesUas(n) {
     slides[slideIndexUas-1].style.display = "block";
     dots[slideIndexUas-1].className += " active";
     captionText.innerHTML = dots[slideIndexUas-1].alt;
+}
+
+// ECVT project functions
+function modalGalleryDeployOnceEcvt() {
+    showSlidesEcvt(slideIndexEcvt);
+}
+function plusSlidesEcvt(n) {
+    showSlidesEcvt(slideIndexEcvt += n);
+}
+function currentSlideEcvt(n) {
+    showSlidesEcvt(slideIndexEcvt = n);
+}
+function showSlidesEcvt(n) {
+    var i;
+    var slides = document.getElementsByClassName("ECVT-pics");
+    var dots = document.getElementsByClassName("ECVT-dots");
+    var captionText = document.getElementById("ECVT-caption");
+
+    if (n > slides.length) {
+        slideIndexEcvt = 1;
+    }
+    if (n < 1) {
+        slideIndexEcvt = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndexEcvt-1].style.display = "block";
+    dots[slideIndexEcvt-1].className += " active";
+    captionText.innerHTML = dots[slideIndexEcvt-1].alt;
 }
