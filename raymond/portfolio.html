@@ -180,7 +180,7 @@ h2 {
 .align-right {
     text-align: right;
 }
-.ALBA-pics, .RAVN-pics, .ACDA-pics, .MAP-pics, .INDU-pics, .GCAT-pics, .RCKT-pics, .BDAQ-pics, .AKLA-pics {
+.ALBA-pics, .RAVN-pics, .ACDA-pics, .MAP-pics, .INDU-pics, .GCAT-pics, .RCKT-pics, .BDAQ-pics, .AKLA-pics, .UH2-pics {
     display: none;
     margin-left: auto;
     margin-right: auto;
@@ -307,9 +307,9 @@ h2 {
     <h2 style="text-align: left;" id="mannedAC">MANNED AIRCRAFT</h2>
     <div class="row">
         <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
-            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalUH2">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalUH2" onclick="modalGalleryDeployOnceUH2()">
                 <div class="portfolio-item-overlay">
-                    <p class="overlay-text short" aria-hidden="true" style="color: #404040 !important;"><b>UH2</b></p>
+                    <p class="overlay-text short" aria-hidden="true"><b>UH2</b></p>
                 </div>
                 <a title="Hydrogen aircraft design"><img class="img-responsive" src="images/UH2_icon.jpg" alt="UH2"></a>
             </div>
@@ -558,20 +558,51 @@ h2 {
                 <div class="row justify-content-center">
                     <div class="col-lg">
                         <h2 class="align-center">UH2 Regional Aircraft</h2>
-                        <img src="images/UH2.jpg" class="img-rounded" width="100%">
+                        <div class="col-lg-12 col-xs-12">
+                            <div class="UH2-pics">
+                                <img src="images/UH2_1.png" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="UH2-pics">
+                                <img src="images/UH2_2.png" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="UH2-pics">
+                                <img src="images/UH2_3.png" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <a class="prev" onclick="plusSlidesUH2(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlidesUH2(1)">&#10095;</a>
+                        </div>
+
+                        <div class="modal-caption">
+                            <p id="UH2-caption"></p>
+                        </div>
+
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="UH2-dots cursor gallery-sub" src="images/UH2_1.png" style="width:100%" onclick="currentSlideUH2(1)" alt="Dash 8 Q300 retrofit with fuel cell electric powertrain and hydrogen modules">
+                          </div>
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="UH2-dots cursor gallery-sub" src="images/UH2_2.png" style="width:100%" onclick="currentSlideUH2(2)" alt="Iron Bird testing with 30 kW fuel cell engine and 250 kW electric motor">
+                        </div>
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="UH2-dots cursor gallery-sub" src="images/UH2_3.png" style="width:100%" onclick="currentSlideUH2(3)" alt="Hydrogen modules loaded through the cargo door">
+                        </div>
+                        
                         <h2 class="align-right">&nbsp;</h2>
                         <p style="text-align: left;">
                             <a href="https://hydrogen.aero" target="_blank">Universal Hydrogen Co.</a> 
-                            is a fuel logistics company and I'm currently
-                            working with them as a Powertrain Engineer so that we can make 
-                            hydrogen-powered commercial flight a reality!
+                            hopes to decarbonize aviation through an end-to-end hydrogen logistics system and 
+                            hydrogen electric aircraft powertrains. I'm currently working with them to develop 
+                            a MW class hydrogen powertrain - the world's largest!
                             <br><br>
-                            Read more about us on Bloomberg 
+                            Read more about the company on Bloomberg 
                             <a href="https://www.bloomberg.com./news/articles/2020-08-26/eighty-years-after-hindenburg-startup-pitches-hydrogen-flight" target="_blank">here</a>
                             and 
                             <a href="https://www.bloomberg.com./news/articles/2020-09-23/universal-hydrogen-wants-to-get-fuel-cell-planes-ready-to-fly-by-2024" target="_blank">here</a>, 
                             with additional articles on Avweek (cover photo for October 2020), 
                             InterestingEngineering, and more.
+                            <br><br>
+                            You can also find me on <a href="https://www.instagram.com/universalhydrogen/" target="_blank">Instagram</a>, 
+                            <a href="https://www.tiktok.com/@universalhydrogen?lang=en" target="_blank">TikTok</a>, 
+                            and <a href="https://twitter.com/universal_h2?lang=en" target="_blank">Twitter</a> @universalhydrogen!
                         </p> 
                     </div>
                 </div>
@@ -780,11 +811,11 @@ h2 {
                             <div class="ALBA-pics">
                                 <img src="images/ALBA3.jpg" class="img-rounded gallery-main" width="100%">
                             </div>
-                            <script>console.log("Here1")</script>
+                            <!-- <script>console.log("Here1")</script> -->
                             <a class="prev" onclick="plusSlidesAlba(-1)">&#10094;</a>
-                            <script>console.log("Here2")</script>
+                            <!-- <script>console.log("Here2")</script> -->
                             <a class="next" onclick="plusSlidesAlba(1)">&#10095;</a>
-                            <script>console.log("Here3")</script>
+                            <!-- <script>console.log("Here3")</script> -->
                         </div>
 
                         <div class="modal-caption">
