@@ -56,6 +56,7 @@ function showSlidesAlba(n) {
 // UH2 project functions
 function modalGalleryDeployOnceUH2() {
     showSlidesUH2(slideIndexUH2);
+    console.log(slideIndexUh2);
 }
 function plusSlidesUH2(n) {
     showSlidesUH2(slideIndexUH2 += n);
