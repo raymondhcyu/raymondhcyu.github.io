@@ -4,8 +4,8 @@
     as argument (e.g. ALBA-pics and RAVN-pics), breaks the flow.
 */
 
-var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot, slideIndexAkla, slideIndexUas, slideIndexEcvt;
-slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = slideIndexAkla = slideIndexUas = slideIndexEcvt = 1;
+var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot, slideIndexAkla, slideIndexUas, slideIndexEcvt, slideIndexUH2;
+slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = slideIndexAkla = slideIndexUas = slideIndexEcvt = slideIndexUH2 = 1;
 
 // Alba project functions
 function modalGalleryDeployOnceAlba() {
