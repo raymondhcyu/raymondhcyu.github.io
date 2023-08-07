@@ -180,7 +180,7 @@ h2 {
 .align-right {
     text-align: right;
 }
-.ALBA-pics, .RAVN-pics, .ACDA-pics, .MAP-pics, .INDU-pics, .GCAT-pics, .RCKT-pics, .BDAQ-pics, .AKLA-pics, .UH2-pics {
+.ALBA-pics, .RAVN-pics, .ACDA-pics, .MAP-pics, .INDU-pics, .GCAT-pics, .RCKT-pics, .BDAQ-pics, .AKLA-pics, .UH2-pics, .HYDR-pics {
     display: none;
     margin-left: auto;
     margin-right: auto;
@@ -298,14 +298,26 @@ h2 {
 
 <div class="container-fluid bg-2">
     <h2 style="text-align: left; margin-top: 1em;"></h2> 
-    <p style="text-align: left;">
-        Note: To comply with NDAs, all media displayed are in the public domain, copywrite-free, or permission was given for use.
+    <p style="text-align: center;">
+        To comply with NDAs, all media displayed are in the public domain, copywrite-free, or permission was given for use.
+    </p>
+    <p style="text-align: center;">
+        Please <a href="contact.html">contact me</a> for any consulting requests
     </p>
 </div>
 
 <div class="container-fluid bg-2 text-center">
     <h2 style="text-align: left;" id="mannedAC">MANNED AIRCRAFT</h2>
     <div class="row">
+        <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalHYDR" onclick="modalGalleryDeployOnceHydr()">
+                <div class="portfolio-item-overlay">
+                    <p class="overlay-text long" aria-hidden="true"><b>Hydrogen aviation</b></p>
+                </div>
+                <a title="Hydrogen aviation"><img class="img-responsive" src="images/HYDR_icon.jpg" alt="Hydrogen"></a>
+            </div>
+            <figcaption class="figure-caption">Hydrogen aviation</figcaption>
+        </div>
         <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
             <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalUH2" onclick="modalGalleryDeployOnceUH2()">
                 <div class="portfolio-item-overlay">
@@ -315,7 +327,6 @@ h2 {
             </div>
             <figcaption class="figure-caption">Hydrogen Dash-8 Q300 development</figcaption>
         </div>
-
         <div class="portfolio-display col-md-4 col-lg-4 col-xs-6">
             <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalA320">
                 <div class="portfolio-item-overlay">
@@ -547,6 +558,69 @@ h2 {
     </div>
 </div>
 
+<div class="portfolio-modal modal fade" id="portfolioModalHYDR" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid" style="margin-left: 10%; width:80%">
+                <div class="row justify-content-center">
+                    <div class="col-lg">
+                        <h2 class="align-center">HYDROGEN AVIATION OUTREACH</h2>
+                        <div class="col-lg-12 col-xs-12">
+                            <div class="HYDR-pics">
+                                <img src="images/HYDR1.png" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="HYDR-pics">
+                                <img src="images/HYDR2.png" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <div class="HYDR-pics">
+                                <img src="images/HYDR3.png" class="img-rounded gallery-main" width="100%">
+                            </div>
+                            <!-- <script>console.log("Here1")</script> -->
+                            <a class="prev" onclick="plusSlidesHydr(-1)">&#10094;</a>
+                            <!-- <script>console.log("Here2")</script> -->
+                            <a class="next" onclick="plusSlidesHydr(1)">&#10095;</a>
+                            <!-- <script>console.log("Here3")</script> -->
+                        </div>
+
+                        <div class="modal-caption">
+                            <p id="HYDR-caption"></p>
+                        </div>
+
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="HYDR-dots cursor gallery-sub" src="images/HYDR1.png" style="width:100%" onclick="currentSlideHydr(1)" alt="<a href='https://www.youtube.com/watch?v=IMb5Frr-520' target='_blank'>CNBC interview</a> on <i>Why Hydrogen-Powered Planes Will Beat Electric Planes</i>">
+                          </div>
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="HYDR-dots cursor gallery-sub" src="images/HYDR2.png" style="width:100%" onclick="currentSlideHydr(2)" alt="Weekly vlogs leading up to first flight on Universal Hydrogen's <a href='https://www.linkedin.com/company/uh2/posts/?feedView=all' target='_blank'>LinkedIn</a> page">
+                        </div>
+                        <div class="col-lg-4 col-xs-4">
+                            <img class="HYDR-dots cursor gallery-sub" src="images/HYDR3.png" style="width:100%" onclick="currentSlideHydr(3)" alt="Walkthrough of the hydrogen fuel cell powertrain I developed and patented, installed to a flight test Dash 8 Q300">
+                        </div>
+
+                        <h2 class="align-right">&nbsp;</h2>
+                        <p style="text-align: left;">
+                            When will hydrogen aviation become viable? What does a hydrogen fuel cell propulsion system look like?
+                            <br><br>
+                            As a proponent of hydrogen to fuel sustainable aviation, I often share my experiences internally
+                            within Universal Hydrogen and publicly with investors, partners, media, and other intested parties.
+                            <br><br>
+                            If you have any questions I'm happy to share my experiences and thoughts! 
+                            <br>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+</div>
+
 <div class="portfolio-modal modal fade" id="portfolioModalUH2" role="dialog">
     <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
@@ -632,7 +706,7 @@ h2 {
                             <a href="https://www.bloomberg.com./news/articles/2020-08-26/eighty-years-after-hindenburg-startup-pitches-hydrogen-flight" target="_blank">here</a>, 
                             with additional articles on <a href="https://aviationweek.com/node/4476871" target="_blank">Avweek</a> (cover photos for 
                             October 2020 and March 2023), 
-                            InterestingEngineering, and more with a quick Google!
+                            InterestingEngineering, and see my <a href="https://www.youtube.com/watch?v=IMb5Frr-520" target="_blank">interview on a CNBC feature</a> about hydrogen airplanes!
                             <br><br>
                             You can also find me on <a href="https://www.instagram.com/universalhydrogen/" target="_blank">Instagram</a>, 
                             <a href="https://www.tiktok.com/@universalhydrogen?lang=en" target="_blank">TikTok</a>, 
@@ -1579,7 +1653,7 @@ h2 {
                         <p style="text-align: left;">
                             You're on it now! <br><br>As I always wondered how websites are made, I decided to create my own website
                             instead of using a template. I used HTML, CSS, JS, Bootstrap, and enabled Google Analytics. 
-                            (Using NameCheap, CloudFlare, and GitHub for the domain, security, and hosting, respectively.)
+                            (Using NameCheap, CloudFlare, and GitHub for the domain, security, and hosting.)
                             <br><br>
                             Comments or suggestions? <a href="contact.html">Let me know</a>!
                         </p> 

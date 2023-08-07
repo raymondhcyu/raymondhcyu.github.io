@@ -4,8 +4,12 @@
     as argument (e.g. ALBA-pics and RAVN-pics), breaks the flow.
 */
 
-var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot, slideIndexAkla, slideIndexUas, slideIndexEcvt, slideIndexUH2;
-slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = slideIndexAkla = slideIndexUas = slideIndexEcvt = slideIndexUH2 = 1;
+var slideIndexAlba, slideIndexRavn, slideIndexAcda, slideIndexMap, slideIndexIndu, 
+slideIndexGcat, slideIndexRckt, slideIndexBdaq, slideIndexSpot, slideIndexAkla, 
+slideIndexUas, slideIndexEcvt, slideIndexUH2, slideIndexHydr;
+slideIndexAlba = slideIndexRavn = slideIndexAcda = slideIndexMap = slideIndexIndu = 
+slideIndexGcat = slideIndexRckt = slideIndexBdaq = slideIndexSpot = slideIndexAkla = 
+slideIndexUas = slideIndexEcvt = slideIndexUH2 = slideIndexHydr = 1;
 
 // Alba project functions
 function modalGalleryDeployOnceAlba() {
@@ -50,6 +54,52 @@ function showSlidesAlba(n) {
     slides[slideIndexAlba-1].style.display = "block";
     dots[slideIndexAlba-1].className += " active";
     captionText.innerHTML = dots[slideIndexAlba-1].alt;
+    // console.log("Here15");
+}
+
+// Hydr project functions
+function modalGalleryDeployOnceHydr() {
+    showSlidesHydr(slideIndexHydr);
+}
+function plusSlidesHydr(n) {
+    showSlidesHydr(slideIndexHydr += n);
+}
+function currentSlideHydr(n) {
+    showSlidesHydr(slideIndexHydr = n);
+}
+function showSlidesHydr(n) {
+    var i;
+    var slides = document.getElementsByClassName("HYDR-pics");
+
+    console.log(slides);
+
+    var dots = document.getElementsByClassName("HYDR-dots");
+    var captionText = document.getElementById("HYDR-caption");
+
+    // console.log("Here10")
+
+    if (n > slides.length) {
+        slideIndexHydr = 1;
+        // console.log("Here11");
+    }
+    if (n < 1) {
+        slideIndexHydr = slides.length;
+        // console.log("Here12");
+    }
+    // console.log("Here12.5");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        // console.log("Here13");
+    }
+    // console.log("Here13.5");
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        // console.log("Here14");
+    }
+    slides[slideIndexHydr-1].style.display = "block";
+    dots[slideIndexHydr-1].className += " active";
+    captionText.innerHTML = dots[slideIndexHydr-1].alt;
     // console.log("Here15");
 }
 
